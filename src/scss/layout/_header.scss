@@ -1,0 +1,12 @@
+.header {
+  padding: rem(24) rem(16);
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $line-color;
+
+  @include change-at("tablet") {
+    padding: rem(24) rem(64);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

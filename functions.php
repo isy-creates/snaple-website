@@ -7,3 +7,29 @@ function _themename_assets() {
 }
 
 add_action('wp_enqueue_scripts', '_themename_assets');
+
+// enable logo upload
+
+function snaple_custom_logo_setup() {
+  $defaults = array(
+      'height'               => 48,
+      'width'                => 141,
+      'flex-height'          => true,
+      'flex-width'           => true
+  );
+
+  add_theme_support( 'custom-logo', $defaults );
+}
+
+add_action( 'after_setup_theme', 'snaple_custom_logo_setup' );
+
+//register menus
+function snaple_menu() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menü' ),
+      'extra-menu' => __( 'Footer Menü' )
+    )
+  );
+}
+add_action( 'init', 'snaple_menu' );
