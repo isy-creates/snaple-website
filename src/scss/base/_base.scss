@@ -2,3 +2,16 @@
   background-color: $text-color;
   color: #fff;
 }
+
+:root {
+  --fs-base: #{rem(18)};
+  --fs-h1: calc(var(--fs-base) + #{rem(18)});
+  --fs-h2: calc(var(--fs-base) + #{rem(14)});
+  --fs-h3: calc(var(--fs-base) + #{rem(10)});
+
+  @include change-at("tablet") {
+    --fs-h1: calc(var(--fs-base) + #{rem(22)});
+    --fs-h2: calc(var(--fs-base) + #{rem(18)});
+    --fs-h3: calc(var(--fs-base) + #{rem(14)});
+  }
+}

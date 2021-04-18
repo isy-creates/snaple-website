@@ -1,41 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Heebo:wght@400;700&display=swap");
 
+// -- global font stylings -- //
+
 body {
   font-family: "Heebo", sans-serif;
-  font-size: rem(18);
-  line-height: 1.8;
+  font-size: var(--fs-base);
+  line-height: 1.6;
   color: $text-color;
 }
 
-.intro {
-  font-size: rem(24);
-  margin-bottom: rem(24);
-}
-
-.small {
-  font-size: rem(14);
-}
-
-.strap {
-  text-transform: uppercase;
-  line-height: 1.2;
-  font-size: rem(16);
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.text + .h3 {
-  margin-top: rem(24);
-}
-
-.text {
-  margin-bottom: rem(16);
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
-//Headlines
 .h1,
 .h2,
 .h3,
@@ -49,11 +22,44 @@ body {
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2;
-  margin-bottom: rem(24);
 }
 
 .h1 {
-  font-size: rem(32);
+  font-size: var(--fs-h1);
+}
+
+.h2 {
+  font-size: var(--fs-h2);
+}
+
+.h3 {
+  font-size: var(--fs-h3);
+}
+
+.small {
+  font-size: calc(var(--fs-base) - #{rem(4)});
+}
+
+// -- spacing -- //
+
+.h1,
+.h2,
+.h3,
+.intro {
+  margin-bottom: $size-m;
+}
+
+.text {
+  margin-bottom: $size-s;
+}
+
+.text + .h3 {
+  margin-top: $size-l;
+}
+
+// -- pipe after h1-- //
+
+.h1 {
   position: relative;
 
   &:after {
@@ -61,7 +67,7 @@ body {
     position: absolute;
     margin-left: 8px;
     margin-top: 3px;
-    height: rem(32);
+    height: 32px;
     width: 1px;
     background-color: $primary-light;
     border: 1px solid $primary-light;
@@ -69,33 +75,27 @@ body {
   }
 
   @include change-at("tablet") {
-    font-size: rem(40);
-
     &:after {
-      height: rem(48);
+      height: 48px;
       margin-top: 0;
     }
   }
 }
 
-.h2,
-.h3 {
-  font-size: rem(24);
-  @include change-at("tablet") {
-    font-size: rem(32);
-  }
-}
+// -- highlighting focus word -- //
 
 .focus {
   color: $primary;
 }
 
+// -- list styling -- //
+
 .list {
-  margin-left: rem(1);
+  margin-left: $size-l;
   &__item {
     &::marker {
       color: $primary;
-      font-size: rem(16);
+      font-size: var(--fs-base);
     }
   }
 }
