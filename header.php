@@ -19,7 +19,7 @@
 
     <?php wp_nav_menu( array(
       'theme_location' => 'header-menu',
-      'container' => false,
+      'container' => 'ul',
       'menu_class' => 'menu',
       'menu_id' => 'main-navigation'
     )); ?>

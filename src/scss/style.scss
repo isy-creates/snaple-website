@@ -3,6 +3,7 @@
 @import "abstracts/rem-coverter";
 @import "abstracts/variables";
 @import "base/breakpoints";
+@import "abstracts/animations";
 
 @import "base/base";
 @import "base/typography";
@@ -11,3 +12,4 @@
 @import "components/navigation";
 
 @import "layout/header";
+@import "layout/footer";

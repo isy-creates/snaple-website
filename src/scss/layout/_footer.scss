@@ -1,0 +1,42 @@
+.footer {
+  display: grid;
+  grid-gap: $size-l;
+  padding: $size-l 0;
+
+  @include change-at("tablet") {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $line-color;
+    padding: $size-l $size-m;
+  }
+
+  @include change-at("desktop") {
+    padding: $size-l $size-xxl;
+  }
+
+  &-social {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: $size-xl;
+    &__icon {
+      width: 20px;
+      height: auto;
+
+      &--github {
+        &:hover {
+          path {
+            stroke: var(--primary);
+          }
+        }
+      }
+
+      &--codepen {
+        &:hover {
+          path {
+            fill: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
