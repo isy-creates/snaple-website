@@ -1,6 +1,5 @@
 // bundle.js
 
-console.log("bundle");
+import CheckOverflow from "./checkoverflow/check-overflow";
 
-// slider.js
-console.log("slider");
+new CheckOverflow();

@@ -1,7 +1,45 @@
 .menu {
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-gap: 0 $size-xl;
+  grid-auto-flow: column;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  margin-left: $size-m;
+
+  padding-bottom: $size-l;
+  border-bottom: 1px solid $line-color;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &-item {
     list-style-type: none;
+  }
+
+  @include change-at("desktop") {
+    border: none;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+}
+
+.current-menu-item {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid var(--primary);
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -24px;
+
+    @include change-at("desktop") {
+      bottom: -34px;
+    }
   }
 }

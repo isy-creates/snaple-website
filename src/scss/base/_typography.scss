@@ -9,19 +9,20 @@ body {
   color: $text-color;
 }
 
-.h1,
-.h2,
-.h3,
-.code {
-  font-family: "Fira Code", monospace;
-}
+.headline {
+  --fs-h1: calc(var(--fs-base) + #{rem(18)});
+  --fs-h2: calc(var(--fs-base) + #{rem(10)});
+  --fs-h3: calc(var(--fs-base) + #{rem(6)});
 
-.h1,
-.h2,
-.h3 {
+  font-family: "Fira Code", monospace;
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2;
+
+  @include change-at("tablet") {
+    --fs-h1: calc(var(--fs-base) + #{rem(22)});
+    --fs-h2: calc(var(--fs-base) + #{rem(14)});
+  }
 }
 
 .h1 {
@@ -30,10 +31,16 @@ body {
 
 .h2 {
   font-size: var(--fs-h2);
+  line-height: 1.4;
 }
 
 .h3 {
   font-size: var(--fs-h3);
+  line-height: 1.4;
+}
+
+.code {
+  font-family: "Fira Code", monospace;
 }
 
 .small {
@@ -85,7 +92,7 @@ body {
 // -- highlighting focus word -- //
 
 .focus {
-  color: $primary;
+  background-color: $primary-light;
 }
 
 // -- list styling -- //

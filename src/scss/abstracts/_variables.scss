@@ -9,8 +9,8 @@ $text-color: hsl(203, 72, 27);
 
 // SIZING
 
-$size-s: rem(8); // base - 8
-$size-m: $size-s * 2; // base
-$size-l: $size-s * 3; // base + 8
-$size-xl: $size-s * 5; //base * 5
-$size-xxl: $size-s * 8; // base * 8
+$size-s: var(--spacer); // base - 8
+$size-m: calc(var(--spacer) * 2); // base
+$size-l: calc(var(--spacer) * 3); // base + 8
+$size-xl: calc(var(--spacer) * 5); //base * 5
+$size-xxl: calc(var(--spacer) * 8); // base * 8

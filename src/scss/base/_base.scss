@@ -5,13 +5,23 @@
 
 :root {
   --fs-base: #{rem(18)};
-  --fs-h1: calc(var(--fs-base) + #{rem(18)});
-  --fs-h2: calc(var(--fs-base) + #{rem(14)});
-  --fs-h3: calc(var(--fs-base) + #{rem(10)});
+  --spacer: #{rem(8)};
+  --primary: hsl(203, 89%, 46%);
+}
+
+body {
+  display: grid;
+  grid-gap: $size-l;
 
   @include change-at("tablet") {
-    --fs-h1: calc(var(--fs-base) + #{rem(22)});
-    --fs-h2: calc(var(--fs-base) + #{rem(18)});
-    --fs-h3: calc(var(--fs-base) + #{rem(14)});
+    grid-gap: $size-xxl;
+  }
+}
+
+.main {
+  padding: $size-l $size-m;
+
+  @include change-at("desktop") {
+    padding: $size-l $size-xxl;
   }
 }
