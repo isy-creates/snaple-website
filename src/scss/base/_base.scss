@@ -7,11 +7,19 @@
   --fs-base: #{rem(18)};
   --spacer: #{rem(8)};
   --primary: hsl(203, 89%, 46%);
+  --text-color: hsl(203, 72%, 27%);
+  --headline-color: var(--text-color);
+  --gradient-main: linear-gradient(
+    218deg,
+    hsl(203, 89%, 46%) 0%,
+    hsl(195, 100%, 63%) 100%
+  );
 }
 
 body {
   display: grid;
   grid-gap: $size-l;
+  overflow-x: hidden;
 
   @include change-at("tablet") {
     grid-gap: $size-xxl;
@@ -19,9 +27,17 @@ body {
 }
 
 .main {
+  width: 100%;
+  min-width: 0; /*to prevent grid blowout*/
+  max-width: rem(1440);
+  margin: 0 auto;
   padding: $size-l $size-m;
 
   @include change-at("desktop") {
     padding: $size-l $size-xxl;
   }
+}
+
+.section {
+  margin-bottom: $size-xxl;
 }

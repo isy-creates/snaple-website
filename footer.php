@@ -5,10 +5,12 @@
       'theme_location' => 'footer-menu',
       'container' => 'ul',
       'menu_class' => 'menu',
-      'menu_id' => 'footer-navigation'
+      'menu_id' => 'footer-navigation',
+      'echo'    => true,
+      'exclude' => getPageBySlugname('startseite')
     )); ?>
   <div class="footer-social">
-    <a href="#">
+    <a href="#" aria-label="Link to Github">
       <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg"
         class="footer-social__icon--github">
         <path
@@ -16,7 +18,7 @@
           stroke="#53616A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </a>
-    <a href="#">
+    <a href="#" aria-label="Link to Codepen">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
         class="footer-social__icon--codepen">
         <path fill-rule="evenodd" clip-rule="evenodd"

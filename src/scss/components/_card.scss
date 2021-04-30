@@ -1,0 +1,52 @@
+.card {
+  display: inline-block;
+  width: 100%;
+  border-radius: $border-radius;
+  border: 1px solid $line-color;
+  @include card-shadow();
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    @include card-shadow-hover;
+  }
+
+  &__head {
+    padding: $size-l 0;
+    max-height: rem(376);
+    display: flex;
+    justify-content: center;
+    border-radius: rem(10) rem(10) 0 0;
+  }
+
+  &__image {
+    height: 100%;
+    width: auto;
+  }
+
+  &__tags {
+    margin-bottom: $size-m;
+    & > * {
+      &:not(:last-of-type) {
+        margin-right: $size-m;
+      }
+    }
+  }
+
+  &__headline {
+    margin-bottom: $size-l;
+  }
+
+  &__body {
+    padding: $size-l;
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    --primary: hsl(203, 89%, 46%);
+    &::before {
+      content: url("/snaple/wp-content/uploads/2021/04/call-to-action.svg");
+      margin-right: var(--spacer);
+    }
+  }
+}

@@ -1,0 +1,103 @@
+//colorcodes
+
+.cc {
+  &__background {
+    background: var(--gradient-main);
+  }
+}
+
+.navigation {
+  --primary: hsl(252, 100%, 79%);
+  --text-color: hsl(244, 100%, 97%);
+  --headline-color: hsl(252, 100%, 86%);
+  --gradient-main: linear-gradient(
+    218deg,
+    hsl(252, 100%, 84%) 0%,
+    hsl(252, 100%, 79%) 100%
+  );
+  --gradient-light: linear-gradient(
+    218deg,
+    hsl(252, 100%, 87%) 0%,
+    hsl(252, 100%, 90%) 100%
+  );
+}
+
+.input {
+  --primary: hsl(302, 84%, 76%);
+  --text-color: hsl(300, 81%, 96%);
+  --headline-color: hsl(302, 82%, 83%);
+  --gradient-main: linear-gradient(
+    218deg,
+    hsl(302, 88%, 89%) 0%,
+    hsl(302, 84%, 76%) 100%
+  );
+  --gradient-light: linear-gradient(
+    218deg,
+    hsl(302, 80%, 83%) 0%,
+    hsl(302, 78%, 92%) 100%
+  );
+}
+
+.list-pattern {
+  --primary: hsl(2, 95%, 72%);
+  --text-color: hsl(2, 89%, 93%);
+  --headline-color: hsl(2, 100%, 77%);
+  --gradient-main: linear-gradient(
+    218deg,
+    hsl(2, 94%, 76%) 0%,
+    hsl(2, 94%, 72%) 100%
+  );
+  --gradient-light: linear-gradient(
+    218deg,
+    hsl(2, 94%, 77%) 0%,
+    hsl(2, 93%, 81%) 100%
+  );
+}
+
+.content {
+  --primary: hsl(32, 92%, 68%);
+  --text-color: hsl(32, 92%, 100%);
+  --headline-color: hsl(32, 92%, 78%);
+  --gradient-main: linear-gradient(
+    218deg,
+    hsl(37, 92%, 76%) 0%,
+    hsl(32, 92%, 68%) 100%
+  );
+  --gradient-light: linear-gradient(
+    218deg,
+    hsl(33, 91%, 81%) 0%,
+    hsl(38, 85%, 81%) 100%
+  );
+}
+
+.interaction {
+  --primary: hsl(272, 100%, 79%);
+  --text-color: hsl(270, 100%, 96%);
+  --headline-color: hsl(272, 100%, 86%);
+  --gradient-main: linear-gradient(
+    218deg,
+    hsl(272, 100%, 84%) 0%,
+    hsl(272, 100%, 79%) 100%
+  );
+  --gradient-light: linear-gradient(
+    218deg,
+    hsl(272, 100%, 87%) 0%,
+    hsl(272, 100%, 90%) 100%
+  );
+}
+
+.template {
+  --primary: hsl(332, 92%, 76%);
+  --text-color: hsl(332, 90%, 96%);
+  --headline-color: hsl(332, 90%, 86%);
+  --gradient-main: linear-gradient(
+    218deg,
+    hsl(332, 92%, 80%) 0%,
+    hsl(332, 90%, 76%) 100%
+  );
+  --gradient-light: linear-gradient(
+    218deg,
+    hsl(332, 92%, 80%) 0%,
+    hsl(332, 93%, 85%) 100%
+  );
+}

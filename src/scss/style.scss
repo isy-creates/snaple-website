@@ -3,13 +3,19 @@
 @import "abstracts/rem-coverter";
 @import "abstracts/variables";
 @import "base/breakpoints";
+@import "abstracts/shadows";
 @import "abstracts/animations";
+@import "abstracts/colors";
 
 @import "base/base";
 @import "base/typography";
 
 @import "components/logo";
 @import "components/navigation";
+@import "components/tag";
+@import "components/card";
 
 @import "layout/header";
 @import "layout/footer";
+
+@import "pages/frontpage";

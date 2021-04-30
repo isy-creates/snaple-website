@@ -1,9 +1,10 @@
 // Colors
 
-$primary: hsl(203, 89, 46);
-$primary-light: hsl(203, 89, 86);
-$line-color: hsl(205, 27, 75);
-$text-color: hsl(203, 72, 27);
+$primary: hsl(203, 89%, 46%);
+$primary-light: hsl(203, 89%, 86%);
+$line-color: hsl(205, 27%, 75%);
+$text-color: hsl(203, 72%, 27%);
+$pill-color: hsl(203, 90%, 96%);
 
 // SIZING
 
@@ -12,3 +13,6 @@ $size-m: calc(var(--spacer) * 2); // 16
 $size-l: calc(var(--spacer) * 3); // 24
 $size-xl: calc(var(--spacer) * 5); //40
 $size-xxl: calc(var(--spacer) * 8); // 64
+
+// Various
+$border-radius: rem(10);

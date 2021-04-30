@@ -9,7 +9,6 @@ function _themename_assets() {
 add_action('wp_enqueue_scripts', '_themename_assets');
 
 // enable logo upload
-
 function snaple_custom_logo_setup() {
   $defaults = array(
       'height'               => 48,
@@ -33,3 +32,24 @@ function snaple_menu() {
   );
 }
 add_action( 'init', 'snaple_menu' );
+
+//remove Startseite
+function getPageBySlugname($slugname) {
+  $args = array(
+      'post_type'     => 'page',
+      'hierarchical'  => 0,
+      'post_status'   => 'publish'
+  );
+  $pages = get_pages($args);
+  foreach ($pages as $page) {
+      if ($page->post_name == $slugname) {
+          return $page->ID;
+      }
+  }       
+}
+
+//add featured Image
+function mytheme_post_thumbnails() {
+  add_theme_support( 'post-thumbnails' );
+}
+add_action( 'after_setup_theme', 'mytheme_post_thumbnails' );
