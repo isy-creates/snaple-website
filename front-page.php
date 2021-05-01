@@ -2,90 +2,96 @@
 
 <main class="main">
 
-  <section class="section section__intro">
-    <h1 class="headline h1"><span class="focus">snaple</span> helps you design & code faster </h1>
-    <p class="text">Common UI Patterns turned into Frontend snacks for you to build from there.</p>
+  <section class="section">
+    <div class="section__intro">
+      <h1 class="headline h1"><span class="focus">snaple</span> helps you design & code faster </h1>
+      <p class="text">Common UI Patterns turned into Frontend snacks for you to build from there.</p>
+    </div>
+
   </section>
   <section class="section section__pattern">
     <h2 class="headline h2">Latest <span class="focus">pattern</span></h2>
-    <div class="pattern__container">
-      <a href="#" aria-label="content pattern" class="card cc content">
-        <div class="card__head card__head cc__background">
-          <img src="wp-content/uploads/2021/04/test.svg"
-            alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
-        </div>
-        <div class="card__body">
-          <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <a href="#" aria-label="content pattern" class="card cc content swiper-slide">
+          <div class="card__head card__head cc__background">
+            <img src="wp-content/uploads/2021/04/test.svg"
+              alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
           </div>
-          <h3 class="headline h3 card__headline">Card</h3>
-          <div class="card__link">View Card</div>
-        </div>
-      </a>
+          <div class="card__body">
+            <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+            </div>
+            <h3 class="headline h3 card__headline">Card</h3>
+            <div class="card__link">View Card</div>
+          </div>
+        </a>
 
-      <a href="#" aria-label="content pattern" class="card cc navigation">
-        <div class="card__head card__head cc__background">
-          <img src="wp-content/uploads/2021/04/test.svg"
-            alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
-        </div>
-        <div class="card__body">
-          <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+        <a href="#" aria-label="content pattern" class="card cc navigation swiper-slide">
+          <div class="card__head card__head cc__background">
+            <img src="wp-content/uploads/2021/04/test.svg"
+              alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
           </div>
-          <h3 class="headline h3 card__headline">Card</h3>
-          <div class="card__link">View Card</div>
-        </div>
-      </a>
+          <div class="card__body">
+            <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+            </div>
+            <h3 class="headline h3 card__headline">Card</h3>
+            <div class="card__link">View Card</div>
+          </div>
+        </a>
 
-      <a href="#" aria-label="content pattern" class="card cc input">
-        <div class="card__head card__head cc__background">
-          <img src="wp-content/uploads/2021/04/test.svg"
-            alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
-        </div>
-        <div class="card__body">
-          <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+        <a href="#" aria-label="content pattern" class="card cc input swiper-slide">
+          <div class="card__head card__head cc__background">
+            <img src="wp-content/uploads/2021/04/test.svg"
+              alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
           </div>
-          <h3 class="headline h3 card__headline">Card</h3>
-          <div class="card__link">View Card</div>
-        </div>
-      </a>
+          <div class="card__body">
+            <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+            </div>
+            <h3 class="headline h3 card__headline">Card</h3>
+            <div class="card__link">View Card</div>
+          </div>
+        </a>
 
-      <a href="#" aria-label="content pattern" class="card cc list-pattern">
-        <div class="card__head card__head cc__background">
-          <img src="wp-content/uploads/2021/04/test.svg"
-            alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
-        </div>
-        <div class="card__body">
-          <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+        <a href="#" aria-label="content pattern" class="card cc list-pattern swiper-slide">
+          <div class="card__head card__head cc__background">
+            <img src="wp-content/uploads/2021/04/test.svg"
+              alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
           </div>
-          <h3 class="headline h3 card__headline">Card</h3>
-          <div class="card__link">View Card</div>
-        </div>
-      </a>
+          <div class="card__body">
+            <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+            </div>
+            <h3 class="headline h3 card__headline">Card</h3>
+            <div class="card__link">View Card</div>
+          </div>
+        </a>
 
-      <a href="#" aria-label="content pattern" class="card cc interaction">
-        <div class="card__head card__head cc__background">
-          <img src="wp-content/uploads/2021/04/test.svg"
-            alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
-        </div>
-        <div class="card__body">
-          <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+        <a href="#" aria-label="content pattern" class="card cc interaction swiper-slide">
+          <div class="card__head card__head cc__background">
+            <img src="wp-content/uploads/2021/04/test.svg"
+              alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
           </div>
-          <h3 class="headline h3 card__headline">Card</h3>
-          <div class="card__link">View Card</div>
-        </div>
-      </a>
+          <div class="card__body">
+            <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+            </div>
+            <h3 class="headline h3 card__headline">Card</h3>
+            <div class="card__link">View Card</div>
+          </div>
+        </a>
 
-      <a href="#" aria-label="content pattern" class="card cc template">
-        <div class="card__head card__head cc__background">
-          <img src="wp-content/uploads/2021/04/test.svg"
-            alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
-        </div>
-        <div class="card__body">
-          <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+        <a href="#" aria-label="content pattern" class="card cc template swiper-slide">
+          <div class="card__head card__head cc__background">
+            <img src="wp-content/uploads/2021/04/test.svg"
+              alt="attachment-post-thumbnail size-post-thumbnail wp-post-image" class="card__image" loading="lazy">
           </div>
-          <h3 class="headline h3 card__headline">Card</h3>
-          <div class="card__link">View Card</div>
-        </div>
-      </a>
+          <div class="card__body">
+            <div class="card__tags"><span class="tag">tag</span><span class="tag">tag</span><span class="tag">tag</span>
+            </div>
+            <h3 class="headline h3 card__headline">Card</h3>
+            <div class="card__link">View Card</div>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 

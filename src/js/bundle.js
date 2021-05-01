@@ -1,5 +1,35 @@
 // bundle.js
 
-import CheckOverflow from "./checkoverflow/check-overflow";
+import Swiper from "swiper";
+// core version + navigation, pagination modules:
+import SwiperCore, { Pagination } from "swiper/core";
 
-new CheckOverflow();
+// configure Swiper to use modules
+SwiperCore.use([Pagination]);
+
+const swiper = new Swiper(".swiper-container", {
+  // Optional parameters
+  direction: "horizontal",
+  allowTouchMove: true,
+  autoHeight: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 24
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24
+    },
+    1340: {
+      slidesPerView: 3,
+      spaceBetween: 24
+    }
+  },
+  threshold: 5,
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  }
+});

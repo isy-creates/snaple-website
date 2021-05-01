@@ -1,10 +1,15 @@
 .card {
   display: inline-block;
   width: 100%;
+  max-width: 80vw;
   border-radius: $border-radius;
   border: 1px solid $line-color;
   @include card-shadow();
   transition: all 0.3s ease-in-out;
+
+  @include change-at("tablet") {
+    max-width: rem(453);
+  }
 
   &:hover {
     @include card-shadow-hover;

@@ -62,6 +62,10 @@ export const images = () => {
     .pipe(dest("dist/images"));
 };
 
+export const fonts = () => {
+  return src("src/fonts/**/*.{woff}").pipe(dest("dist/fonts"));
+};
+
 export const copy = () => {
   return src([
     "src/**/*",

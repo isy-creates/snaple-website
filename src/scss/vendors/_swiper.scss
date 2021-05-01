@@ -1,0 +1,40 @@
+.swiper {
+  &-container {
+    overflow: visible;
+  }
+
+  &-pagination {
+    position: relative;
+    bottom: 0 !important;
+
+    &-bullet {
+      padding: $size-m;
+      background: transparent;
+      opacity: 1;
+      height: initial;
+      width: initial;
+      &::before {
+        content: "";
+        height: $size-m;
+        width: $size-m;
+        border-radius: 50%;
+        background-color: $primary-light;
+        display: block;
+      }
+
+      &-active {
+        background: transparent;
+        &::before {
+          background-color: var(--primary);
+        }
+      }
+    }
+  }
+}
+
+//remove margin between bullets
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0;
+}

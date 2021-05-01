@@ -3,24 +3,3 @@
     max-width: rem(616);
   }
 }
-
-.pattern {
-  &__container {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 80vw;
-    gap: $size-l;
-
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-
-    @include change-at("tablet") {
-      grid-auto-columns: rem(453);
-    }
-
-    @include change-at("desktop") {
-      overflow-x: visible;
-    }
-  }
-}
