@@ -1,10 +1,10 @@
 .footer {
-  display: grid;
-  grid-gap: $size-l;
+  display: flex;
+  flex-direction: column;
   padding: $size-l 0;
 
   @include change-at("tablet") {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     border-top: 1px solid $line-color;
     padding: $size-l $size-m;
@@ -14,16 +14,24 @@
     padding: $size-l $size-xxl;
   }
 
+  &-menu {
+    text-align: center;
+  }
+
   &-social {
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    grid-gap: $size-xl;
+    text-align: center;
+    padding: $size-l $size-m 0;
+
+    @include change-at("tablet") {
+      padding: 0;
+    }
+
     &__icon {
       width: 20px;
       height: auto;
 
       &--github {
+        margin-right: $size-m;
         &:hover {
           path {
             stroke: var(--primary);

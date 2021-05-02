@@ -11,7 +11,6 @@ const swiper = new Swiper(".swiper-container", {
   // Optional parameters
   direction: "horizontal",
   allowTouchMove: true,
-  autoHeight: true,
   breakpoints: {
     320: {
       slidesPerView: 1,

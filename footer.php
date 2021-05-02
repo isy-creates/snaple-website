@@ -4,7 +4,7 @@
   <?php wp_nav_menu( array(
       'theme_location' => 'footer-menu',
       'container' => 'ul',
-      'menu_class' => 'menu',
+      'menu_class' => 'menu footer-menu',
       'menu_id' => 'footer-navigation',
       'echo'    => true,
       'exclude' => getPageBySlugname('startseite')
