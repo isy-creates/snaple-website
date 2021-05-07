@@ -30,7 +30,7 @@
             <?php the_post_thumbnail(); ?>
           </div>
           <div class="card__body">
-            <div class="card__tags">
+            <div class="tagline">
               <?php 
                   $posttags = get_the_tags(); 
                   if ($posttags) {

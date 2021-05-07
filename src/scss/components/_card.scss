@@ -29,15 +29,6 @@
     width: auto;
   }
 
-  &__tags {
-    margin-bottom: $size-m;
-    & > * {
-      &:not(:last-of-type) {
-        margin-right: $size-m;
-      }
-    }
-  }
-
   &__headline {
     margin-bottom: $size-l;
   }

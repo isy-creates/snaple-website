@@ -1,0 +1,47 @@
+.pattern {
+  display: grid;
+  grid-gap: $size-xl;
+
+  &__preview,
+  &__information {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -40px;
+    width: calc(100% + 40px);
+
+    & > * {
+      margin: 40px 0 0 40px;
+    }
+  }
+
+  &__example,
+  &__code,
+  &__use,
+  &__accessebility {
+    flex: 0 1 calc(100% + 40px);
+    margin-right: $size-l;
+
+    @include change-at("tablet") {
+      flex: 0 1 calc(50% - 40px);
+      margin-right: 0;
+    }
+  }
+
+  &__example {
+    position: relative;
+  }
+
+  &__resizeable {
+    @include card-shadow();
+    border-radius: $border-radius;
+    background: var(--gradient-main);
+
+    @include change-at("desktop") {
+      resize: horizontal;
+      overflow: auto;
+      position: absolute;
+      z-index: 5;
+      width: 100%;
+    }
+  }
+}

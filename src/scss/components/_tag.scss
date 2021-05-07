@@ -4,3 +4,12 @@
   background-color: $pill-color;
   border-radius: $border-radius;
 }
+
+.tagline {
+  margin-bottom: $size-m;
+  & > * {
+    &:not(:last-of-type) {
+      margin-right: $size-m;
+    }
+  }
+}

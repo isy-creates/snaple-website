@@ -1,7 +1,6 @@
 .section {
   &__intro {
     max-width: rem(616);
-    padding-left: $size-m;
 
     @include change-at("desktop") {
       padding-left: 0;
