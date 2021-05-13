@@ -3,6 +3,7 @@
 import Swiper from "swiper";
 // core version + navigation, pagination modules:
 import SwiperCore, { Pagination } from "swiper/core";
+import Resize from "./resize/resize.js";
 
 // configure Swiper to use modules
 SwiperCore.use([Pagination]);
@@ -32,3 +33,5 @@ const swiper = new Swiper(".swiper-container", {
     clickable: true
   }
 });
+
+new Resize();

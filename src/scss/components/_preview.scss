@@ -1,0 +1,67 @@
+.preview {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: rem(3);
+  @include card-shadow;
+}
+
+.height {
+  &--image {
+    height: rem(216);
+  }
+  &--8 {
+    height: rem(8);
+  }
+
+  &--16 {
+    height: rem(16);
+  }
+
+  &--24 {
+    height: rem(24);
+  }
+
+  &--body {
+    padding: rem(24);
+  }
+  &--32 {
+    height: rem(32);
+  }
+  &--40 {
+    height: rem(40);
+  }
+}
+
+.width {
+  &--one-fourth {
+    width: 25%;
+  }
+
+  &--half {
+    width: 50%;
+  }
+
+  &--three-fourth {
+    width: 75%;
+  }
+}
+
+.cc {
+  &--image {
+    background: var(--gradient-light);
+  }
+
+  &--headline {
+    background-color: var(--headline-color);
+    border-radius: 100px;
+  }
+
+  &--text {
+    background-color: var(--text-color);
+    border-radius: 100px;
+  }
+
+  &--cta {
+    background-color: var(--primary);
+  }
+}

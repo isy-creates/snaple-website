@@ -7,7 +7,6 @@
 
   <?php  wp_head(); ?>
   <title><?php is_front_page() ? bloginfo('description') : wp_title(); ?> | <?php echo get_bloginfo('name') ?></title>
-
 </head>
 
 

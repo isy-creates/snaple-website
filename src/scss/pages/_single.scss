@@ -29,12 +29,19 @@
 
   &__example {
     position: relative;
+    min-height: rem(616);
   }
 
   &__resizeable {
     @include card-shadow();
     border-radius: $border-radius;
     background: var(--gradient-main);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $size-m;
 
     @include change-at("desktop") {
       resize: horizontal;

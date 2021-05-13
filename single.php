@@ -18,18 +18,17 @@
                 ?>
       </div>
       <h1 class="headline h1"><span class="focus"><?php the_title(); ?></span> Pattern</h1>
-      <?php the_content(); ?>
     </article>
 
 
     <article class="pattern__preview">
       <div class="pattern__example ">
         <div class="pattern__resizeable <?php echo $cat_name  ?>">
-          test
+          <?php the_field('preview_code'); ?>
         </div>
       </div>
       <div class="pattern__code">
-        code
+        <?php  echo get_the_content() ?>
       </div>
     </article>
     <article class="pattern__information">
