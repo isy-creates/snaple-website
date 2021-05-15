@@ -28,7 +28,9 @@
         </div>
       </div>
       <div class="pattern__code">
+        <h2 class="headline h2">How to <span class="focus">code</span> the <?php the_title(); ?> pattern</h2>
         <?php  echo get_the_content() ?>
+        <a href="#" class="code__codepen-link">Play with it on Codepen</a>
       </div>
     </article>
     <article class="pattern__information">

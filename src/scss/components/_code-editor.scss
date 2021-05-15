@@ -1,0 +1,107 @@
+.code__tab {
+  height: calc(100% - 48px);
+  max-height: rem(364);
+  margin: 0;
+
+  .uagb-tabs__body {
+    height: 100%;
+  }
+
+  .uagb-tabs__body-wrap {
+    padding: 0;
+    height: calc(100% - 54px);
+    border-width: 0 !important;
+    background-color: var(--text-color);
+    border-radius: 0 rem(10) rem(10) rem(10);
+  }
+
+  pre {
+    height: 100%;
+    margin: 0;
+    padding: $size-m;
+    font-family: "Fira Code", monospace;
+    color: #fff;
+  }
+
+  code {
+    background-color: transparent;
+  }
+
+  .uagb-tabs__body-container {
+    overflow: auto;
+    height: calc(100% - 48px);
+    padding: 0;
+  }
+
+  .uagb-tabs__panel {
+    align-items: flex-end;
+    .uagb-tab {
+      border-radius: rem(10) rem(10) 0 0;
+      border: none !important;
+      box-shadow: inset 0 0 0 1px $line-color;
+      padding: $size-m $size-m rem(10);
+
+      span {
+        color: var(--text-color) !important;
+      }
+
+      &.uagb-tabs__active {
+        background-color: var(--text-color) !important;
+        font-weight: 700;
+        border-width: 0 !important;
+        box-shadow: none;
+
+        span {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+
+  .wp-block-buttons {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .wp-block-button {
+      margin: 0;
+      display: block;
+      &__link {
+        display: block;
+        padding: $size-s;
+        border-radius: 0 0 rem(10) rem(10) !important;
+        background: var(--gradient-main);
+        @include card-shadow();
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+        z-index: 1;
+        &::before {
+          content: url("/snaple/wp-content/uploads/2021/05/call-to-action-white.svg");
+          margin-right: var(--spacer);
+        }
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: rem(48);
+          left: -100%;
+          top: 0;
+          display: block;
+          position: absolute;
+          z-index: -1;
+          background-color: var(--primary);
+          transition: left 0.5s ease-in-out;
+        }
+
+        &:hover {
+          @include card-shadow-hover();
+          &::after {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

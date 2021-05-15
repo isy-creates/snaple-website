@@ -21,7 +21,7 @@
     flex: 0 1 calc(100% + 40px);
     margin-right: $size-l;
 
-    @include change-at("tablet") {
+    @include change-at("desktop") {
       flex: 0 1 calc(50% - 40px);
       margin-right: 0;
     }
@@ -30,6 +30,10 @@
   &__example {
     position: relative;
     min-height: rem(616);
+  }
+
+  &__code {
+    position: relative;
   }
 
   &__resizeable {
