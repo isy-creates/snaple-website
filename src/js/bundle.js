@@ -4,6 +4,7 @@ import Swiper from "swiper";
 // core version + navigation, pagination modules:
 import SwiperCore, { Pagination } from "swiper/core";
 import Resize from "./resize/resize.js";
+import Copy from "./copy/copy.js";
 
 // configure Swiper to use modules
 SwiperCore.use([Pagination]);
@@ -35,3 +36,4 @@ const swiper = new Swiper(".swiper-container", {
 });
 
 new Resize();
+new Copy();

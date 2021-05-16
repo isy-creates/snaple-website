@@ -31,7 +31,8 @@
         <h2 class="headline h2">How to <strong>code</strong> the <?php the_title(); ?> pattern</h2>
         <?php  echo get_the_content() ?>
         <div class="codepen">
-          <a href="<?php the_field('codepen_link'); ?>" target="_blank" class="codepen__link small">Play with it on
+          <a href="<?php the_field('codepen_link'); ?>" target="_blank" rel="noopener noreferrer"
+            class="codepen__link small">Play with it on
             Codepen</a>
         </div>
       </div>
