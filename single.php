@@ -28,17 +28,22 @@
         </div>
       </div>
       <div class="pattern__code">
-        <h2 class="headline h2">How to <span class="focus">code</span> the <?php the_title(); ?> pattern</h2>
+        <h2 class="headline h2">How to <strong>code</strong> the <?php the_title(); ?> pattern</h2>
         <?php  echo get_the_content() ?>
-        <a href="#" class="code__codepen-link">Play with it on Codepen</a>
+        <div class="codepen">
+          <a href="<?php the_field('codepen_link'); ?>" target="_blank" class="codepen__link small">Play with it on
+            Codepen</a>
+        </div>
       </div>
     </article>
     <article class="pattern__information">
       <div class="pattern__use">
-        use
+        <h3 class="headline h3"><strong>Use</strong> the <?php the_title(); ?> pattern when you want to</h3>
+        <?php the_field('usecase', false); ?>
       </div>
       <div class="pattern__accessebility">
-        accessebility
+        <h3 class="headline h3"><?php the_title(); ?> pattern <strong>accessibility</strong> tipps</h3>
+        <?php the_field('accessebility', false); ?>
       </div>
     </article>
     <?php endwhile; endif; ?>

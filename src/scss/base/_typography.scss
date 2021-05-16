@@ -95,15 +95,31 @@ body {
 
 // -- highlighting focus word -- //
 
-.focus {
+%focus {
   background-color: $primary-light;
+  padding: 0 rem(3);
+  border-radius: 3px;
+}
+
+.h2,
+.h3 {
+  strong {
+    @extend %focus;
+  }
+}
+
+.focus {
+  @extend %focus;
 }
 
 // -- list styling -- //
 
-.unordered-list {
+.unordered-list,
+.pattern__use ul,
+.pattern__accessebility ul {
   margin-left: $size-l;
-  &__item {
+  &__item,
+  li {
     &::marker {
       color: $primary;
       font-size: var(--fs-base);

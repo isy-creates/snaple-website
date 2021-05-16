@@ -1,7 +1,9 @@
 class Resize {
   constructor() {
     this.resize = document.querySelector(".pattern__resizeable");
-    this.preview = document.querySelector(".preview");
+    this.preview = document.querySelector(
+      ".pattern__resizeable div:first-child"
+    );
 
     this.initObserver();
   }
@@ -12,14 +14,24 @@ class Resize {
         let width = entry.contentRect.width;
 
         if (width >= 500) {
-          this.preview.classList.add("large");
+          this.add();
         } else {
-          this.preview.classList.remove("large");
+          this.remove();
         }
       }
     });
 
-    ro.observe(this.resize);
+    if (this.resize) {
+      ro.observe(this.resize);
+    }
+  }
+
+  remove() {
+    this.preview.classList.remove("large");
+  }
+
+  add() {
+    this.preview.classList.add("large");
   }
 }
 

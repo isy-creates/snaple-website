@@ -2,6 +2,12 @@
   display: grid;
   grid-gap: $size-xl;
 
+  &__headline {
+    .h1 {
+      margin-bottom: 0;
+    }
+  }
+
   &__preview,
   &__information {
     display: inline-flex;
@@ -11,6 +17,12 @@
 
     & > * {
       margin: 40px 0 0 40px;
+    }
+  }
+
+  &__preview {
+    @include change-at("desktop") {
+      align-items: center;
     }
   }
 
@@ -37,7 +49,6 @@
   }
 
   &__resizeable {
-    @include card-shadow();
     border-radius: $border-radius;
     background: var(--gradient-main);
     height: 100%;
@@ -53,6 +64,36 @@
       position: absolute;
       z-index: 5;
       width: 100%;
+    }
+  }
+}
+
+.codepen {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(48);
+  &__link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: rem(13) 0;
+
+    &:hover {
+      &:after {
+        @extend %after;
+        border-bottom: 2px solid var(--primary);
+        animation: hover 0.3s;
+        margin-bottom: -27px;
+      }
+    }
+
+    &::before {
+      content: "";
+      background-image: url("/snaple/wp-content/uploads/2021/04/call-to-action.svg");
+      background-repeat: no-repeat;
+      height: 14px;
+      width: 12px;
+      margin-right: var(--spacer);
     }
   }
 }

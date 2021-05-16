@@ -2,7 +2,7 @@
   background-color: #fff;
   border: 1px solid #fff;
   border-radius: rem(3);
-  @include card-shadow;
+  @include preview-shadow();
 }
 
 .height {
