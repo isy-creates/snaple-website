@@ -8,3 +8,25 @@
     width: 100%;
   }
 }
+
+@keyframes from-bottom {
+  0% {
+    top: rem(-38px);
+    opacity: 0;
+  }
+
+  30% {
+    top: rem(-48px);
+    opacity: 1;
+  }
+
+  90% {
+    top: rem(-48px);
+    opacity: 1;
+  }
+
+  100% {
+    top: rem(-50px);
+    opacity: 0;
+  }
+}

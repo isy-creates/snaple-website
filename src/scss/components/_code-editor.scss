@@ -71,6 +71,8 @@
     .wp-block-button {
       margin: 0;
       display: block;
+      position: relative;
+
       &__link {
         display: block;
         padding: $size-s;
