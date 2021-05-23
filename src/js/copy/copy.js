@@ -1,14 +1,60 @@
 class Copy {
   constructor() {
     this.button = document.querySelectorAll(".copy-code");
+    this.size = this.checkScreenSize();
 
-    this.event();
+    this.events();
+    this.init();
   }
 
-  event() {
+  events() {
+    window.addEventListener("resize", e => this.init(e));
+    this.button.forEach(el => el.addEventListener("click", e => this.init(e)));
+  }
+
+  init(e) {
+    this.size = this.checkScreenSize();
+
+    if (this.size === "mobile") {
+      this.changeButtonText("mobile");
+      this.changeLinkText();
+    }
+
+    if (this.size === "desktop") {
+      this.changeButtonText("desktop");
+      this.copyCode(e);
+    }
+  }
+
+  changeLinkText() {
     this.button.forEach(el =>
-      el.addEventListener("click", e => this.copyCode(e))
+      el.firstChild.setAttribute(
+        "href",
+        "mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.website.com."
+      )
     );
+  }
+
+  checkScreenSize() {
+    if (window.screen.width >= 1548) {
+      return "desktop";
+    } else {
+      return "mobile";
+    }
+  }
+
+  changeButtonText(size) {
+    let text;
+
+    if (size === "mobile") {
+      text = "Send Website Link via email";
+    } else {
+      text = "Copy Code to clipboard";
+    }
+
+    this.button.forEach(el => {
+      el.firstChild.innerHTML = text;
+    });
   }
 
   copyCode(e) {
@@ -41,9 +87,3 @@ class Copy {
 }
 
 export default Copy;
-
-//1. create constructor
-//2. create copyCode
-//3. create successMessage
-//4. create error message
-//5. create mobile version
