@@ -11,22 +11,21 @@
 
 @keyframes from-bottom {
   0% {
-    top: rem(-38px);
+    bottom: rem(40);
     opacity: 0;
   }
 
   30% {
-    top: rem(-48px);
     opacity: 1;
   }
 
-  90% {
-    top: rem(-48px);
+  80% {
+    bottom: rem(52);
     opacity: 1;
   }
 
   100% {
-    top: rem(-50px);
+    bottom: rem(50);
     opacity: 0;
   }
 }

@@ -1,13 +1,14 @@
 .messages {
   position: absolute;
   z-index: 1000;
-  top: rem(-48);
   left: 50%;
+  bottom: rem(50);
   transform: translateX(-50%);
   padding: 4px 8px;
   border-radius: rem(5);
   @include card-shadow();
   background-color: #fff;
+  color: var(--text-color);
   animation: from-bottom 1s;
 
   &::after {

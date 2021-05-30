@@ -3,24 +3,25 @@
   max-height: rem(364);
   margin: 0;
 
-  .uagb-tabs__body {
-    height: 100%;
-  }
+  // .uagb-tabs__body {
+  //   height: 100%;
+  // }
 
   .uagb-tabs__body-wrap {
     padding: 0;
-    height: calc(100% - 54px);
+    //height: calc(100% - 54px);
     border-width: 0 !important;
-    background-color: var(--text-color);
-    border-radius: 0 rem(10) 0 0;
   }
 
   pre {
-    height: 100%;
+    height: rem(313);
     margin: 0;
     padding: $size-m;
     font-family: "Fira Code", monospace;
     color: #fff;
+    background-color: var(--text-color);
+    border-radius: 0 rem(10) 0 0;
+    overflow: auto;
   }
 
   code {
@@ -33,7 +34,7 @@
 
   .uagb-tabs__body-container {
     overflow: auto;
-    height: rem(313);
+    //height: rem(313);
     padding: 0;
   }
 
@@ -62,51 +63,51 @@
     }
   }
 
-  .wp-block-buttons {
+  // .wp-block-buttons {
+  //   display: block;
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: -48px;
+  //   .wp-block-button {
+  //     margin: 0;
+  //     display: block;
+  //     position: relative;
+
+  .copy__link {
     display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -48px;
-    .wp-block-button {
-      margin: 0;
+    padding: $size-s;
+    border-radius: 0 0 rem(10) rem(10) !important;
+    background: var(--gradient-main);
+    @include card-shadow();
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    &::before {
+      content: url("/snaple/wp-content/uploads/2021/05/call-to-action-white.svg");
+      margin-right: var(--spacer);
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: rem(48);
+      left: -100%;
+      top: 0;
       display: block;
-      position: relative;
+      position: absolute;
+      z-index: -1;
+      background-color: var(--primary);
+      transition: left 0.5s ease-in-out;
+    }
 
-      &__link {
-        display: block;
-        padding: $size-s;
-        border-radius: 0 0 rem(10) rem(10) !important;
-        background: var(--gradient-main);
-        @include card-shadow();
-        position: relative;
-        overflow: hidden;
-        transition: all 0.3s;
-        z-index: 1;
-        &::before {
-          content: url("/snaple/wp-content/uploads/2021/05/call-to-action-white.svg");
-          margin-right: var(--spacer);
-        }
-
-        &::after {
-          content: "";
-          width: 100%;
-          height: rem(48);
-          left: -100%;
-          top: 0;
-          display: block;
-          position: absolute;
-          z-index: -1;
-          background-color: var(--primary);
-          transition: left 0.5s ease-in-out;
-        }
-
-        &:hover {
-          @include card-shadow-hover();
-          &::after {
-            left: 0;
-          }
-        }
+    &:hover {
+      @include card-shadow-hover();
+      &::after {
+        left: 0;
       }
     }
   }

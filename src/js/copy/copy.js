@@ -1,60 +1,50 @@
 class Copy {
   constructor() {
-    this.button = document.querySelectorAll(".copy-code");
-    this.size = this.checkScreenSize();
+    this.codeblock = document.querySelector(".wp-block-code");
+    this.tabsBody = document.querySelectorAll(".uagb-tabs__body");
+    this.mobileButton = document.querySelectorAll(".copy__link-mobile");
+    this.desktopButton = document.querySelectorAll(".copy__link-desktop");
 
     this.events();
     this.init();
   }
 
   events() {
-    window.addEventListener("resize", e => this.init(e));
-    this.button.forEach(el => el.addEventListener("click", e => this.init(e)));
-  }
+    window.addEventListener("click", e => {
+      if (e.target.classList.contains("copy__link-desktop")) {
+        this.copyCode(e);
+      }
 
-  init(e) {
-    this.size = this.checkScreenSize();
-
-    if (this.size === "mobile") {
-      this.changeButtonText("mobile");
-      this.changeLinkText();
-    }
-
-    if (this.size === "desktop") {
-      this.changeButtonText("desktop");
-      this.copyCode(e);
-    }
-  }
-
-  changeLinkText() {
-    this.button.forEach(el =>
-      el.firstChild.setAttribute(
-        "href",
-        "mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.website.com."
-      )
-    );
-  }
-
-  checkScreenSize() {
-    if (window.screen.width >= 1548) {
-      return "desktop";
-    } else {
-      return "mobile";
-    }
-  }
-
-  changeButtonText(size) {
-    let text;
-
-    if (size === "mobile") {
-      text = "Send Website Link via email";
-    } else {
-      text = "Copy Code to clipboard";
-    }
-
-    this.button.forEach(el => {
-      el.firstChild.innerHTML = text;
+      if (e.target.classList.contains("copy__link-mobile")) {
+        this.copyURL(e);
+      }
     });
+  }
+
+  init() {
+    let mobileCheck = this.isMobileDevice();
+
+    if (mobileCheck) {
+      this.createButton("mobile");
+    } else {
+      this.createButton("desktop");
+    }
+  }
+
+  createButton(version) {
+    let buttonText = version === "mobile" ? "Copy Webseite Link" : "Copy Code";
+    let button = `<a class="copy__link copy__link-${version}" href="#">${buttonText}</a>`;
+
+    this.tabsBody.forEach(el => {
+      el.insertAdjacentHTML("beforeend", button);
+    });
+  }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
   }
 
   copyCode(e) {
@@ -71,17 +61,30 @@ class Copy {
     this.successMessage(e);
   }
 
+  copyURL(e) {
+    e.preventDefault();
+    let input = document.createElement("input");
+    let text = window.location.href;
+    document.body.appendChild(input);
+
+    input.value = text;
+    input.select();
+    document.execCommand("copy");
+    document.body.removeChild(input);
+    this.successMessage(e);
+  }
+
   successMessage(e) {
     let message = document.createElement("p");
     message.classList.add("messages");
-    let node = document.createTextNode("Code copied");
+    let node = document.createTextNode("Copied to clipboard");
     message.appendChild(node);
 
     let button = e.target.parentNode;
-    button.appendChild(message);
+    this.codeblock.appendChild(message);
 
     let removeButton = setTimeout(() => {
-      button.removeChild(message);
+      this.codeblock.removeChild(message);
     }, 1000);
   }
 }
