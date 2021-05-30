@@ -1,0 +1,41 @@
+.section__archive {
+  display: grid;
+  grid-gap: $size-l;
+  padding: 0 $size-l 0 $size-l;
+
+  @include change-at("tablet") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include change-at("desktop") {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+}
+
+.archive {
+  &__card {
+    position: relative;
+    width: 100%;
+    max-width: initial;
+    padding: $size-l $size-l $size-xl;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 20%;
+      height: 5px;
+      background-color: var(--primary);
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &:after {
+        width: 60%;
+        transition: width 0.3s ease-in-out;
+      }
+    }
+  }
+}

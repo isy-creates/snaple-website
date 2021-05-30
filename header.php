@@ -15,7 +15,7 @@
   <header class="header">
     <?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
 
-    ###SEARCHBAR###
+    <?php get_search_form(); ?>
 
     <?php wp_nav_menu( array(
       'theme_location' => 'header-menu',
