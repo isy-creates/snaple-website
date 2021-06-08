@@ -1,36 +1,55 @@
 <?php get_header(); ?>
 
 <main class="main">
-  <h1 class="headline h1">The quick brown <span class="focus">fox</span> jumps over the lazy dog</h1>
-  <h2 class="headline h2">The quick brown <span class="focus">fox</span> jumps over the lazy dog</h2>
-  <h3 class="headline h3">The quick brown <span class="focus">fox</span> jumps over the lazy dog</h3>
 
-  <p class="small">Smalltext</p>
+  <section class="section">
+    <div class="section__intro">
+      <h1 class="headline h1"><?php the_field('headline'); ?></h1>
+      <p class="text"><?php the_field('introtext'); ?></p>
+    </div>
 
-  <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione at doloribus nemo sit repellat
-    exercitationem quod beatae delectus reiciendis </p>
-  <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis porro veniam, atque quaerat ipsam
-    cupiditate accusantium eos perspiciatis alias, perferendis non exercitationem quis! Ducimus, optio quod. Ipsam eaque
-    quis facilis?</p>
-  <h3 class="headline h3">Text</h3>
-  <p class="text">Praesentium tenetur nihil quia, nisi voluptatum expedita cumque molestias necessitatibus architecto
-    sequi placeat
-    soluta ullam iusto unde dolorem in quae dolorum veritatis illum reprehenderit iure numquam quas. Rerum, laboriosam
-    voluptatum?</p>
-  <p class="text">Eligendi doloribus saepe inventore, veniam numquam corrupti commodi, sint at placeat ut sunt repellat
-    nihil optio
-    impedit omnis soluta maxime dolores explicabo corporis similique beatae cum ea laborum! Adipisci, tempora.</p>
-  <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam corporis molestias repudiandae,
-    voluptatum quis ipsum. Necessitatibus nulla mollitia ut et at libero aliquid dolore ratione quaerat, fuga beatae
-    voluptas reprehenderit.</p>
-  <h3 class="headline h3">Lorem <span class="focus">Ipsum</span></h3>
-  <ul class="list">
-    <li class="list__item">veniam numquam corrupti commodi, sint at placeat</li>
-    <li class="list__item">rem ipsum dolor sit amet consectetur </li>
-    <li class="list__item">acilis iure amet, aperiam veritatis</li>
-    <li class="list__item">nisi voluptatum expedita</li>
-    <li class="list__item">nulla mollitia ut et at libero aliquid dolore</li>
-  </ul>
-</main>
+  </section>
+  <section class="section section__pattern">
+    <h2 class="headline h2">Latest <span class="focus">pattern</span></h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <?php 
+          $homepagePosts = new WP_Query(array(
+            'posts_per_page' => 5
+          ));
 
-<?php get_footer(); ?>
+          while ( $homepagePosts->have_posts() ) {
+            $homepagePosts->the_post(); 
+            $categories = get_the_category(); 
+            $cat_name = lcfirst($categories[0]->cat_name);
+          ?>
+
+        <a href="<?php the_permalink(); ?>" aria-label="content pattern"
+          class="card cc <?php echo $cat_name  ?> swiper-slide">
+          <div class="card__head card__head cc__background">
+            <?php the_post_thumbnail(); ?>
+          </div>
+          <div class="card__body">
+            <div class="tagline">
+              <?php 
+                  $posttags = get_the_tags(); 
+                  if ($posttags) {
+                    foreach($posttags as $tag) {
+                      echo "<span class=\"tag\">" . $tag->name . '</span>'; 
+                    }
+                  }
+                ?>
+            </div>
+            <h3 class="headline h3 card__headline"><?php the_title(); ?></h3>
+            <div class="card__link">View <?php the_title(); ?></div>
+          </div>
+        </a>
+        <?php } wp_reset_postdata();
+          ?>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+
+  <?php get_footer(); ?>

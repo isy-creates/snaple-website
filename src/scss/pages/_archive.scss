@@ -15,27 +15,6 @@
 
 .archive {
   &__card {
-    position: relative;
-    width: 100%;
     max-width: initial;
-    padding: $size-l $size-l $size-xl;
-
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0;
-      width: 20%;
-      height: 5px;
-      background-color: var(--primary);
-      transition: width 0.3s ease-in-out;
-    }
-
-    &:hover {
-      &:after {
-        width: 60%;
-        transition: width 0.3s ease-in-out;
-      }
-    }
   }
 }

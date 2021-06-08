@@ -22,10 +22,28 @@
     background-color: var(--text-color);
     border-radius: 0 rem(10) 0 0;
     overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 0.5em;
+      height: 0.5em;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--text-color);
+      border-radius: 3px;
+      border-right: 2px solid var(--text-color);
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ffffff;
+      border-radius: $border-radius;
+      border-right: 2px solid var(--text-color);
+      border-top: 2px solid var(--text-color);
+    }
   }
 
   code {
     background-color: transparent;
+    white-space: pre;
     &::selection {
       background-color: #fff;
       color: var(--text-color);
@@ -33,8 +51,6 @@
   }
 
   .uagb-tabs__body-container {
-    overflow: auto;
-    //height: rem(313);
     padding: 0;
   }
 
@@ -59,20 +75,15 @@
         span {
           color: #fff !important;
         }
+
+        &:hover {
+          a {
+            cursor: auto;
+          }
+        }
       }
     }
   }
-
-  // .wp-block-buttons {
-  //   display: block;
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: -48px;
-  //   .wp-block-button {
-  //     margin: 0;
-  //     display: block;
-  //     position: relative;
 
   .copy__link {
     display: block;

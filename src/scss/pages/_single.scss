@@ -1,6 +1,7 @@
 .pattern {
   display: grid;
   grid-gap: $size-xl;
+  grid-template-columns: minmax(0, 1fr);
 
   &__headline {
     .h1 {
@@ -30,8 +31,9 @@
   &__code,
   &__use,
   &__accessebility {
-    flex: 0 1 calc(100% + 40px);
-    margin-right: $size-l;
+    //flex: 0 1 calc(100% + 40px);
+    width: calc(100% - 62px);
+    //margin-right: $size-l;
 
     @include change-at("desktop") {
       flex: 0 1 calc(50% - 40px);

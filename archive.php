@@ -12,7 +12,7 @@ get_header(); ?>
   <section class="section section__archive">
 
     <?php while(have_posts()) { the_post(); ?>
-    <a class="card archive__card" href="<?php the_permalink(); ?>">
+    <a class="card card__body archive__card" href="<?php the_permalink(); ?>">
       <div class="tagline">
         <?php 
                   $posttags = get_the_tags(); 
