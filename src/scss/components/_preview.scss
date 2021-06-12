@@ -5,63 +5,184 @@
   @include preview-shadow();
 }
 
+//~~ CHANGEABLE ELEMENTS ~~\\
+
+//colors
+$color: 203;
+$saturation: 89%;
+$lightness-40: 46%;
+$lightness-70: 76%;
+$lightness-80: 86%;
+$lightness-90: 96%;
+
+$gradient-light: hsl(195, 100%, 63%);
+$gradient-dark: hsl(203, 89%, 46%);
+
+$line-color: hsl(200, 45%, 92%);
+$shadow-color: hsl(203, 72%, 39%);
+
+//others
+$border-radius: 0.313rem;
+
+//~~ NON-CHANGEABLE ELEMENTS ~~\\
+
+//colors
+$color-primary-40: var(--primary);
+$color-primary-70: var(--headline-color);
+$color-primary-80: var(--text-color);
+$color-primary-90: hsl($color, $saturation, $lightness-90);
+
+@mixin background-40 {
+  background-color: $color-primary-40;
+}
+@mixin background-70 {
+  background-color: $color-primary-70;
+}
+@mixin background-80 {
+  background-color: $color-primary-80;
+}
+@mixin background-90 {
+  background-color: $color-primary-90;
+}
+
+@mixin gradient {
+  background-image: linear-gradient(
+    218deg,
+    $gradient-light 0%,
+    $gradient-dark 100%
+  );
+}
+
+//sizes
+$size-8: 0.5rem;
+$size-16: 1rem;
+$size-24: 1.5rem;
+$size-32: 2rem;
+$size-40: 2.5rem;
+$size-240: 15rem;
+
+//sizes height
+@mixin height-8 {
+  height: $size-8;
+}
+@mixin height-16 {
+  height: $size-16;
+}
+@mixin height-24 {
+  height: $size-24;
+}
+@mixin height-32 {
+  height: $size-32;
+}
+@mixin height-40 {
+  height: $size-40;
+}
+@mixin height-240 {
+  height: $size-240;
+}
+
+//sizes width
+@mixin width-one-fourth {
+  width: 25%;
+}
+@mixin width-half {
+  width: 50%;
+}
+@mixin width-three-fourth {
+  width: 75%;
+}
+
+//~~ UTILITY CLASSES ~~\\
+.color {
+  &-primary-40 {
+    background-color: $color-primary-40;
+  }
+  &-primary-70 {
+    background-color: $color-primary-70;
+  }
+  &-primary-80 {
+    background-color: $color-primary-80;
+  }
+  &-primary-90 {
+    background-color: $color-primary-90;
+  }
+
+  &-gradient {
+    @include gradient;
+  }
+}
+
 .height {
-  &--image {
-    height: rem(216);
-  }
   &--8 {
-    height: rem(8);
+    @include height-8;
   }
-
   &--16 {
-    height: rem(16);
+    @include height-16;
   }
-
   &--24 {
-    height: rem(24);
-  }
-
-  &--body {
-    padding: rem(24);
+    @include height-24;
   }
   &--32 {
-    height: rem(32);
+    @include height-32;
   }
   &--40 {
-    height: rem(40);
+    @include height-40;
+  }
+  &--240 {
+    @include height-240;
   }
 }
 
 .width {
   &--one-fourth {
-    width: 25%;
+    @include width-one-fourth;
   }
-
   &--half {
-    width: 50%;
+    @include width-half;
   }
-
   &--three-fourth {
-    width: 75%;
+    @include width-three-fourth;
   }
 }
 
-.cc {
-  &--image {
-    background: var(--gradient-light);
+.has-round-corners-in {
+  &-full {
+    border-radius: 50px;
   }
+  &-element-size {
+    border-radius: $border-radius;
+  }
+}
 
-  &--headline {
-    background-color: var(--headline-color);
-    border-radius: 100px;
-  }
+//~~ ELEMENTS ~~\\
 
-  &--text {
-    background-color: var(--text-color);
-    border-radius: 100px;
-  }
+.is-img {
+  background: var(--gradient-light);
+}
 
-  &--cta {
-    background-color: var(--primary);
-  }
+.is-small {
+  @include height-8;
+  @include width-one-fourth;
+  @include background-80;
+  border-radius: 50px;
+}
+
+.is-h1 {
+  @include background-70;
+  @include height-24;
+  @include width-half;
+  border-radius: 50px;
+}
+
+.is-p {
+  @include background-80;
+  @include height-16;
+  margin-bottom: $size-8;
+  border-radius: 50px;
+}
+
+.is-button {
+  @include background-40;
+  @include height-32;
+  border-radius: $border-radius;
 }
