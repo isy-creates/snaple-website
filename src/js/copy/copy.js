@@ -1,12 +1,12 @@
 class Copy {
   constructor() {
-    this.codeblock = document.querySelector(".wp-block-code");
+    this.codeblock = document.querySelector(".wp-block-prismatic-blocks");
     this.tabsBody = document.querySelectorAll(".uagb-tabs__body");
     this.mobileButton = document.querySelectorAll(".copy__link-mobile");
     this.desktopButton = document.querySelectorAll(".copy__link-desktop");
 
-    this.events();
     this.init();
+    this.events();
   }
 
   events() {
@@ -50,7 +50,7 @@ class Copy {
   copyCode(e) {
     e.preventDefault();
     let target = e.target.closest(".uagb-tabs__body");
-    let code = target.querySelector(".wp-block-code code");
+    let code = target.querySelector(".wp-block-prismatic-blocks code");
     let range = document.createRange();
 
     range.selectNode(code);
@@ -75,16 +75,17 @@ class Copy {
   }
 
   successMessage(e) {
+    let codeblock = e.target.closest(".uagb-tabs__body");
     let message = document.createElement("p");
     message.classList.add("messages");
     let node = document.createTextNode("Copied to clipboard");
     message.appendChild(node);
 
     let button = e.target.parentNode;
-    this.codeblock.appendChild(message);
+    codeblock.appendChild(message);
 
     let removeButton = setTimeout(() => {
-      this.codeblock.removeChild(message);
+      codeblock.removeChild(message);
     }, 1000);
   }
 }

@@ -1,14 +1,10 @@
 .code__tab {
   height: calc(100% - 48px);
   max-height: rem(364);
-  margin: 0;
-
-  // .uagb-tabs__body {
-  //   height: 100%;
-  // }
+  margin: 0 !important;
 
   .uagb-tabs__body-wrap {
-    padding: 0;
+    padding: 0 !important;
     //height: calc(100% - 54px);
     border-width: 0 !important;
   }
@@ -57,10 +53,10 @@
   .uagb-tabs__panel {
     align-items: flex-end;
     .uagb-tab {
-      border-radius: rem(10) rem(10) 0 0;
+      border-radius: rem(10) rem(10) 0 0 !important;
       border: none !important;
       box-shadow: inset 0 0 0 1px $line-color;
-      padding: $size-m $size-m rem(10);
+      padding: $size-m $size-m rem(10) !important;
 
       span {
         color: var(--text-color) !important;
@@ -98,7 +94,7 @@
     color: #fff;
     text-align: center;
     &::before {
-      content: url("/snaple/wp-content/uploads/2021/05/call-to-action-white.svg");
+      content: url("../images/call-to-action-white.svg");
       margin-right: var(--spacer);
     }
 

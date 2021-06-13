@@ -17,6 +17,7 @@
       format("truetype"),
     /* Safari, Android, iOS */
       url("../fonts/heebo/heebo-v10-latin-regular.svg#Heebo") format("svg"); /* Legacy iOS */
+  font-display: fallback;
 }
 /* heebo-700 - latin */
 @font-face {
@@ -35,6 +36,7 @@
       format("truetype"),
     /* Safari, Android, iOS */
       url("../fonts/heebo/heebo-v10-latin-700.svg#Heebo") format("svg"); /* Legacy iOS */
+  font-display: fallback;
 }
 
 /* fira-code-regular - latin */
@@ -56,6 +58,7 @@
     /* Safari, Android, iOS */
       url("../fonts/fira_code/fira-code-v10-latin-regular.svg#FiraCode")
       format("svg"); /* Legacy iOS */
+  font-display: fallback;
 }
 /* fira-code-700 - latin */
 @font-face {
@@ -75,6 +78,7 @@
     /* Safari, Android, iOS */
       url("../fonts/fira_code/fira-code-v10-latin-700.svg#FiraCode")
       format("svg"); /* Legacy iOS */
+  font-display: fallback;
 }
 
 // -- global font stylings -- //
@@ -147,7 +151,7 @@ body {
 }
 
 .text + .h3 {
-  margin-top: $size-l;
+  margin-top: $size-xl;
 }
 
 // -- pipe after h1-- //

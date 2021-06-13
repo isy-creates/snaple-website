@@ -57,7 +57,7 @@
     position: relative;
     --primary: hsl(203, 89%, 46%);
     &::before {
-      content: url("/snaple/wp-content/uploads/2021/04/call-to-action.svg");
+      content: url("../images/call-to-action.svg");
       margin-right: var(--spacer);
     }
   }
