@@ -40,7 +40,7 @@
     <article class="pattern__information">
       <div class="pattern__use">
         <?php if( get_field('usecase') ): ?>
-        <h3 class="headline h3"><strong>Use</strong> the <?php the_title(); ?> pattern when you want to</h3>
+        <h3 class="headline h3"><strong>Use</strong> the <?php the_title(); ?> pattern</h3>
         <?php the_field('usecase', false); ?>
         <?php endif; ?>
       </div>

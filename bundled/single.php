@@ -39,12 +39,16 @@
     </article>
     <article class="pattern__information">
       <div class="pattern__use">
+        <?php if( get_field('usecase') ): ?>
         <h3 class="headline h3"><strong>Use</strong> the <?php the_title(); ?> pattern when you want to</h3>
         <?php the_field('usecase', false); ?>
+        <?php endif; ?>
       </div>
       <div class="pattern__accessebility">
+        <?php if( get_field('accessebility') ): ?>
         <h3 class="headline h3"><?php the_title(); ?> pattern <strong>accessibility</strong> tipps</h3>
         <?php the_field('accessebility', false); ?>
+        <?php endif; ?>
       </div>
     </article>
     <?php endwhile; endif; ?>

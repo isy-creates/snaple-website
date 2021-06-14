@@ -211,3 +211,9 @@ body {
     }
   }
 }
+
+// -- code -- //@
+code {
+  background-color: hsla(203, 89%, 46%, 0.1);
+  border-radius: $border-radius;
+}

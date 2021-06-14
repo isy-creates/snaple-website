@@ -9,3 +9,11 @@ pre[class*="language-"] {
   text-shadow: none;
   font-family: "Fira Code", monospace;
 }
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #fca1c1;
+}

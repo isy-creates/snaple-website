@@ -7,11 +7,11 @@
       'menu_class' => 'menu footer-menu',
       'menu_id' => 'footer-navigation',
       'echo'    => true,
-      'exclude' => getPageBySlugname('startseite')
+      'exclude' => getPageBySlugname('homepage')
     )); ?>
   <div class="footer-social">
 
-    <a href="#" aria-label="Link to Codepen">
+    <a href="https://codepen.io/snaple" target="_blank" rel="noopener noreferrer" aria-label="Link to Codepen">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
         class="footer-social__icon--codepen">
         <path fill-rule="evenodd" clip-rule="evenodd"

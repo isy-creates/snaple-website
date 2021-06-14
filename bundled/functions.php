@@ -59,12 +59,6 @@ function mytheme_post_thumbnails() {
 }
 add_action( 'after_setup_theme', 'mytheme_post_thumbnails' );
 
-//remove unwanted p tags from acf wysiwyg editor
-// function acf_wysiwyg_remove_wpautop() {
-//   remove_filter('acf_the_content', 'wpautop' );
-// }
-// add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
-
 function acf_wysiwyg_remove_wpautop() {
   // remove p tags //
   remove_filter('acf_the_content', 'wpautop' );
@@ -73,9 +67,3 @@ function acf_wysiwyg_remove_wpautop() {
 }
 
 add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
-
-//remove gutenberg editor completly
-// add_action('init', 'my_remove_editor_from_post_type');
-// function my_remove_editor_from_post_type() {
-//     remove_post_type_support( 'post', 'editor' );
-// }
