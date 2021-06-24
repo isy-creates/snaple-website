@@ -1,58 +1,3 @@
-.preview {
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: rem(3);
-  @include preview-shadow();
-}
-
-//~~ CHANGEABLE ELEMENTS ~~\\
-
-//colors
-$color: 203;
-$saturation: 89%;
-$lightness-40: 46%;
-$lightness-70: 76%;
-$lightness-80: 86%;
-$lightness-90: 96%;
-
-$gradient-light: hsl(195, 100%, 63%);
-$gradient-dark: hsl(203, 89%, 46%);
-
-$line-color: hsl(200, 45%, 92%);
-$shadow-color: hsl(203, 72%, 39%);
-
-//others
-$border-radius: 0.313rem;
-
-//~~ NON-CHANGEABLE ELEMENTS ~~\\
-
-//colors
-$color-primary-40: var(--primary);
-$color-primary-70: var(--headline-color);
-$color-primary-80: var(--text-color);
-$color-primary-90: hsl($color, $saturation, $lightness-90);
-
-@mixin background-40 {
-  background-color: $color-primary-40;
-}
-@mixin background-70 {
-  background-color: $color-primary-70;
-}
-@mixin background-80 {
-  background-color: $color-primary-80;
-}
-@mixin background-90 {
-  background-color: $color-primary-90;
-}
-
-@mixin gradient {
-  background-image: linear-gradient(
-    218deg,
-    $gradient-light 0%,
-    $gradient-dark 100%
-  );
-}
-
 //sizes
 $size-8: 0.5rem;
 $size-16: 1rem;
@@ -61,128 +6,122 @@ $size-32: 2rem;
 $size-40: 2.5rem;
 $size-240: 15rem;
 
-//sizes height
-@mixin height-8 {
-  height: $size-8;
-}
-@mixin height-16 {
-  height: $size-16;
-}
-@mixin height-24 {
-  height: $size-24;
-}
-@mixin height-32 {
-  height: $size-32;
-}
-@mixin height-40 {
-  height: $size-40;
-}
-@mixin height-240 {
-  height: $size-240;
-}
-
-//sizes width
-@mixin width-one-fourth {
-  width: 25%;
-}
-@mixin width-half {
-  width: 50%;
-}
-@mixin width-three-fourth {
-  width: 75%;
-}
+$width-one-fourth: 25%;
+$width-half: 50%;
+$width-three-fourth: 75%;
 
 //~~ UTILITY CLASSES ~~\\
-.color {
-  &-primary-40 {
-    background-color: $color-primary-40;
-  }
-  &-primary-70 {
-    background-color: $color-primary-70;
-  }
-  &-primary-80 {
-    background-color: $color-primary-80;
-  }
-  &-primary-90 {
-    background-color: $color-primary-90;
-  }
-
-  &-gradient {
-    @include gradient;
-  }
-}
 
 .height {
   &--8 {
-    @include height-8;
+    height: $size-8;
   }
   &--16 {
-    @include height-16;
+    height: $size-16;
   }
   &--24 {
-    @include height-24;
+    height: $size-24;
   }
   &--32 {
-    @include height-32;
+    height: $size-32;
   }
   &--40 {
-    @include height-40;
+    height: $size-40;
   }
   &--240 {
-    @include height-240;
+    height: $size-240;
   }
 }
 
 .width {
   &--one-fourth {
-    @include width-one-fourth;
+    width: $width-one-fourth;
   }
   &--half {
-    @include width-half;
+    width: $width-half;
   }
   &--three-fourth {
-    @include width-three-fourth;
+    width: $width-three-fourth;
+  }
+  &--small {
+    width: 80px;
   }
 }
 
 .has-round-corners-in {
   &-full {
-    border-radius: 50px;
+    border-radius: var(--border-radius-element);
   }
   &-element-size {
-    border-radius: $border-radius;
+    border-radius: var(--border-radius-element);
   }
 }
 
 //~~ ELEMENTS ~~\\
 
 .is-img {
-  background: var(--gradient-light);
+  background-image: var(--gradient-main);
+  border-radius: var(--border-radius-element);
 }
 
 .is-small {
-  @include height-8;
-  @include width-one-fourth;
-  @include background-80;
-  border-radius: 50px;
+  height: $size-8;
+  width: $width-one-fourth;
+  background-color: var(--text-color);
+  border-radius: var(--border-radius-round);
 }
 
 .is-h1 {
-  @include background-70;
-  @include height-24;
-  @include width-half;
-  border-radius: 50px;
+  background-color: var(--headline-color);
+  height: $size-32;
+  width: $width-half;
+  border-radius: var(--border-radius-round);
 }
 
 .is-p {
-  @include background-80;
-  @include height-16;
-  margin-bottom: $size-8;
-  border-radius: 50px;
+  background-color: var(--text-color);
+  height: $size-16;
+  border-radius: var(--border-radius-round);
+
+  &:last-of-type {
+    margin-top: $size-8;
+  }
 }
 
 .is-button {
-  @include background-40;
-  @include height-32;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius-element);
+  padding: 0.7rem 1.75rem;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--primary {
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: var(--box-shadow);
+  }
+
+  &--white {
+    background-color: var(--white);
+    color: var(--primary);
+    box-shadow: var(--box-shadow);
+  }
+
+  &--secondary {
+    border: 2px solid var(--white);
+    color: var(--white);
+  }
+
+  &--tertiary {
+    color: var(--white);
+  }
+}
+
+.preview {
+  background-color: #fff;
+  border: 1px solid var(--line-color);
+  box-shadow: var(--box-shadow);
 }
