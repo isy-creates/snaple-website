@@ -23,7 +23,7 @@
 
     <article class="pattern__preview">
       <div class="pattern__example ">
-        <div class="pattern__resizeable <?php echo $cat_name  ?>">
+        <div class="preview pattern__resizeable <?php echo $cat_name  ?>">
           <?php the_field('preview_code'); ?>
         </div>
       </div>
