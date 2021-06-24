@@ -9,6 +9,10 @@
   --primary: hsl(203, 89%, 46%);
   --text-color: hsl(203, 72%, 27%);
   --headline-color: hsl(203, 89%, 66%);
+  --border-radius-element: 0.313rem;
+  --border-radius-round: 2.5rem;
+  --line-color: hsl(203, 45%, 46%);
+  --white: hsl(203, 100%, 100%);
   --gradient-main: linear-gradient(
     218deg,
     hsl(203, 89%, 46%) 0%,
@@ -19,14 +23,8 @@
     hsl(195, 100%, 63%) 0%,
     hsl(203, 89%, 83%) 100%
   );
-  --box-shadow: 0 2px 8px -1px hsla(var(--shadow-color), 0.3),
-    0 1px 2px -1px hsla(var(--shadow-color), 0.2),
-    0 1px 0 0 hsla(var(--shadow-color), 0.1);
-  --border-radius-element: 0.313rem;
-  --border-radius-round: 2.5rem;
-  --shadow-color: 203, 72%, 39%;
-  --line-color: hsl(203, 45%, 46%);
-  --white: hsl(203, 100%, 100%);
+  --box-shadow: 0 2px 8px -1px hsla(203, 72%, 39%, 0.3),
+    0 1px 2px -1px hsla(203, 72%, 39%, 0.2), 0 1px 0 0 hsla(203, 72%, 39%, 0.1);
 }
 
 body {
