@@ -1,43 +1,44 @@
 .pattern {
   display: grid;
-  grid-gap: $size-xl;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: rem(16) auto rem(16);
+  grid-template-rows: min-content rem(624) rem(150) auto;
 
-  &__headline {
-    .h1 {
-      margin-bottom: 0;
-    }
+  @include change-at("desktop") {
+    grid-template-columns: rem(64) auto rem(941) auto rem(64);
   }
 
-  &__preview,
-  &__information {
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin: -40px 0 0 -40px;
-    width: calc(100% + 40px);
+  &__headline {
+    grid-column: 2 / span 1;
 
-    & > * {
-      margin: 40px 0 0 40px;
+    @include change-at("desktop") {
+      grid-column: 3 / span 1;
+      margin-bottom: rem(64);
     }
   }
 
   &__preview {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 2;
+
     @include change-at("desktop") {
-      align-items: center;
+      grid-column: 2 / span 3;
     }
   }
 
-  &__example,
-  &__code,
-  &__use,
-  &__accessebility {
-    //flex: 0 1 calc(100% + 40px);
-    width: calc(100% - 62px);
-    //margin-right: $size-l;
+  &__info {
+    grid-column: 2 / span 1;
+    grid-row: 3 / min-content;
+    padding: rem(16) rem(32);
+
+    background-color: #fff;
+    border-radius: $border-radius $border-radius 0 0;
+
+    display: grid;
+    gap: rem(64);
 
     @include change-at("desktop") {
-      flex: 0 1 calc(50% - 40px);
-      margin-right: 0;
+      grid-column: 3 / span 1;
+      padding: rem(64) rem(121);
     }
   }
 
@@ -51,21 +52,18 @@
   }
 
   &__resizeable {
-    border-radius: $border-radius;
+    padding: rem(16) rem(16) 0;
+    border-radius: $border-radius $border-radius 0 0;
     background: var(--gradient-main);
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: $size-m;
+    margin-bottom: rem(150);
 
-    @include change-at("desktop") {
-      resize: horizontal;
-      overflow: auto;
-      position: absolute;
-      z-index: 5;
-      width: 100%;
+    & > div {
+      margin-bottom: rem(150);
     }
   }
 }
