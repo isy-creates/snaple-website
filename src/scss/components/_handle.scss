@@ -1,0 +1,35 @@
+@include change-at("desktop") {
+  #handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: rem(16);
+    background-color: transparent;
+    z-index: 1;
+    padding-right: rem(6);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 40px;
+      background-color: #fff;
+    }
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 40px;
+      background-color: #fff;
+    }
+
+    &:hover {
+      cursor: col-resize;
+    }
+  }
+}

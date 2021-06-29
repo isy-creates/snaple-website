@@ -22,6 +22,10 @@
 
     @include change-at("desktop") {
       grid-column: 2 / span 3;
+      //resize div on both sides at the same time
+      justify-self: center;
+      //initial keep the width before resize
+      width: 100%;
     }
   }
 
@@ -35,6 +39,8 @@
 
     display: grid;
     gap: rem(64);
+
+    z-index: 1;
 
     @include change-at("desktop") {
       grid-column: 3 / span 1;
@@ -52,6 +58,7 @@
   }
 
   &__resizeable {
+    position: relative;
     padding: rem(16) rem(16) 0;
     border-radius: $border-radius $border-radius 0 0;
     background: var(--gradient-main);
@@ -60,10 +67,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: rem(150);
 
-    & > div {
-      margin-bottom: rem(150);
+    > div {
+      &:first-child {
+        margin-bottom: rem(150);
+      }
     }
   }
 }

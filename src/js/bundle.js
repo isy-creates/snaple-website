@@ -3,6 +3,7 @@
 import Swiper from "swiper";
 // core version + navigation, pagination modules:
 import SwiperCore, { Pagination } from "swiper/core";
+import Drag from "./drag/drag.js";
 import Resize from "./resize/resize.js";
 import Copy from "./copy/copy.js";
 
@@ -37,3 +38,4 @@ const swiper = new Swiper(".swiper-container", {
 
 new Resize();
 new Copy();
+new Drag();

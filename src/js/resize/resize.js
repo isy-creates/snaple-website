@@ -36,3 +36,5 @@ class Resize {
 }
 
 export default Resize;
+
+//was bedeutet das false?

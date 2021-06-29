@@ -24,6 +24,7 @@
     <div class="pattern__preview">
       <div class="preview-<?php print strtolower(get_the_title()); ?> pattern__resizeable <?php echo $cat_name  ?>">
         <?php the_field('preview_code'); ?>
+        <div id="handle"></div>
       </div>
     </div>
     <div class="pattern__info">
