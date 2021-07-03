@@ -3,10 +3,13 @@
 @import "abstracts/rem-coverter";
 @import "abstracts/variables";
 @import "base/breakpoints";
-@import "abstracts/shadows";
 @import "abstracts/animations";
 @import "abstracts/colors";
 
+@import "vendors/swiper";
+@import "vendors/prismatic";
+
+@import "base/fonts";
 @import "base/base";
 @import "base/typography";
 
@@ -18,6 +21,7 @@
 @import "components/code-editor";
 @import "components/messages";
 @import "components/handle";
+@import "components/table-of-content";
 
 @import "layout/header";
 @import "layout/footer";
@@ -28,6 +32,3 @@
 
 @import "../../node_modules/swiper/swiper.scss";
 @import "../../node_modules/swiper/components/pagination/pagination.scss";
-
-@import "vendors/swiper";
-@import "vendors/prismatic";

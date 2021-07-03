@@ -1,18 +1,68 @@
-// Colors
+// ~~ COLORS ~~ //
 
-$primary: hsl(203, 89%, 46%);
-$primary-light: hsl(203, 89%, 86%);
+$primary: hsl(205, 91%, 41%);
+$primary-light: hsl(205, 89%, 86%);
+//UI
 $line-color: hsl(205, 27%, 75%);
-$text-color: hsl(203, 72%, 27%);
-$pill-color: hsl(203, 90%, 96%);
+$pill-color: hsl(205, 90%, 96%);
+$white: hsl(205, 100%, 100%);
+$box-shadow: 0 2px 8px -1px hsla(203, 72%, 39%, 0.3),
+  0 1px 2px -1px hsla(203, 72%, 39%, 0.2), 0 1px 0 0 hsla(203, 72%, 39%, 0.1);
+//Text
+$text-color: hsl(205, 12%, 37%);
+$headline-color: hsl(205, 72%, 27%);
+//Gradient
+$gradient-main: linear-gradient(
+  218deg,
+  hsl(203, 89%, 46%) 0%,
+  hsl(195, 100%, 63%) 100%
+);
+$gradient-background: linear-gradient(
+  218deg,
+  hsl(195, 100%, 63%) 0%,
+  hsl(203, 89%, 83%) 100%
+);
 
-// SIZING
+// ~~ SIZING ~~ //
 
-$size-s: var(--spacer); // base - 8
-$size-m: calc(var(--spacer) * 2); // 16
-$size-l: calc(var(--spacer) * 3); // 24
-$size-xl: calc(var(--spacer) * 5); //40
-$size-xxl: calc(var(--spacer) * 8); // 64
+$size-s: rem(8); // base - 8
+$size-m: rem(18); // 16
+$size-l: rem(24); // 24
+$size-xl: rem(40); //40
+$size-xxl: rem(64); // 64
 
-// Various
+//8, 12, 14, 16, 18, 20, 24, 32, 40, 64
+
+$s8: rem(8);
+$s12: rem(12);
+$s14: rem(14);
+$s16: rem(16);
+$s18: rem(18);
+$s20: rem(20);
+$s24: rem(24);
+$s32: rem(32);
+$s40: rem(40);
+$s64: rem(64);
+
+// ~~ SPACE ~~ //
+
+$space-text: $s24;
+$space-section: $s64;
+
+// ~~ TEXT ~~ //
+$font-family-base: "Heebo", sans-serif;
+$font-family-headline: "Fira Code", monospace;
+
+$font-size-small: $s14;
+$font-size-base: clamp($s16, 5vw, $s18);
+$font-size-large: clamp($s20, 5vw, $s24);
+
+$font-size-h1: clamp($s32, 10vw, $s40);
+$font-size-h2: clamp($s24, 10vw, $s32);
+$font-size-h3: clamp($s20, 10vw, $s24);
+
+// ~~ Various
 $border-radius: rem(10);
+$border-radius-small: rem(3);
+
+//Naming Convention:

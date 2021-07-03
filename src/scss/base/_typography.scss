@@ -1,157 +1,77 @@
-//@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Heebo:wght@400;700&display=swap");
-
-/* heebo-regular - latin */
-@font-face {
-  font-family: "Heebo";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/heebo/heebo-v10-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/heebo/heebo-v10-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/heebo/heebo-v10-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../fonts/heebo/heebo-v10-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/heebo/heebo-v10-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/heebo/heebo-v10-latin-regular.svg#Heebo") format("svg"); /* Legacy iOS */
-  font-display: fallback;
-}
-/* heebo-700 - latin */
-@font-face {
-  font-family: "Heebo";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/heebo/heebo-v10-latin-700.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/heebo/heebo-v10-latin-700.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/heebo/heebo-v10-latin-700.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */ url("../fonts/heebo/heebo-v10-latin-700.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../fonts/heebo/heebo-v10-latin-700.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/heebo/heebo-v10-latin-700.svg#Heebo") format("svg"); /* Legacy iOS */
-  font-display: fallback;
-}
-
-/* fira-code-regular - latin */
-@font-face {
-  font-family: "Fira Code";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/fira_code/fira-code-v10-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/fira_code/fira-code-v10-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/fira_code/fira-code-v10-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../fonts/fira_code/fira-code-v10-latin-regular.woff") format("woff"),
-    /* Modern Browsers */
-      url("../fonts/fira_code/fira-code-v10-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/fira_code/fira-code-v10-latin-regular.svg#FiraCode")
-      format("svg"); /* Legacy iOS */
-  font-display: fallback;
-}
-/* fira-code-700 - latin */
-@font-face {
-  font-family: "Fira Code";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/fira_code/fira-code-v10-latin-700.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/fira_code/fira-code-v10-latin-700.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/fira_code/fira-code-v10-latin-700.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../fonts/fira_code/fira-code-v10-latin-700.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/fira_code/fira-code-v10-latin-700.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/fira_code/fira-code-v10-latin-700.svg#FiraCode")
-      format("svg"); /* Legacy iOS */
-  font-display: fallback;
-}
-
 // -- global font stylings -- //
 
 body {
-  font-family: "Heebo", sans-serif;
-  font-size: var(--fs-base);
-  line-height: 1.6;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.8;
   color: $text-color;
 }
 
-.headline {
-  --fs-h1: calc(var(--fs-base) + #{rem(18)});
-  --fs-h2: calc(var(--fs-base) + #{rem(10)});
-  --fs-h3: calc(var(--fs-base) + #{rem(6)});
-
-  font-family: "Fira Code", monospace;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  color: $headline-color;
+  font-family: $font-family-headline;
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2;
+  margin-bottom: $space-text;
+  position: relative;
+}
 
-  @include change-at("tablet") {
-    --fs-h1: calc(var(--fs-base) + #{rem(22)});
-    --fs-h2: calc(var(--fs-base) + #{rem(14)});
+h1,
+.h1 {
+  font-size: $font-size-h1;
+}
+
+h2,
+.h2 {
+  font-size: $font-size-h2;
+}
+
+h3,
+.h3 {
+  font-size: $font-size-h3;
+}
+
+h2,
+h3 {
+  &:before {
+    bottom: 0;
+    content: url("../images/hash.svg");
+    left: -15px;
+    position: absolute;
+    z-index: -1;
   }
 }
 
-.h1 {
-  font-size: var(--fs-h1);
+p {
+  margin-bottom: $space-text;
+  &.has-medium-font-size {
+    font-size: $font-size-large;
+    margin-bottom: $space-section;
+  }
 }
 
-.h2 {
-  font-size: var(--fs-h2);
-  line-height: 1.4;
-}
-
-.h3 {
-  font-size: var(--fs-h3);
-  line-height: 1.4;
-}
-
-.code {
-  font-family: "Fira Code", monospace;
+.code,
+code {
+  font-family: $font-family-headline;
 }
 
 .small {
-  font-size: calc(var(--fs-base) - #{rem(4)});
+  font-size: $font-size-small;
 }
 
-// -- spacing -- //
-
-.h1,
-.h2,
-.h3,
-.intro {
-  margin-bottom: $size-l;
-}
-
-.h2 {
-  margin-bottom: $size-l;
-}
-
-.text {
-  margin-bottom: $size-s;
-
-  a {
-    color: var(--primary);
-    font-weight: 700;
-  }
-}
-
-.text + .h3 {
-  margin-top: $size-xl;
+h2,
+h3 {
+  margin-top: $space-section;
 }
 
 // -- pipe after h1-- //
@@ -160,60 +80,42 @@ body {
   position: relative;
 
   &:after {
-    content: "";
-    position: absolute;
-    margin-left: 8px;
-    margin-top: 3px;
-    height: 32px;
-    width: 1px;
     background-color: $primary-light;
     border: 1px solid $primary-light;
-    border-radius: 10px;
+    border-radius: $border-radius;
+    content: "";
+    height: $s32;
+    margin-left: $s8;
+    margin-top: rem(3);
+    position: absolute;
+    width: 1px;
   }
 
   @include change-at("tablet") {
     &:after {
-      height: 48px;
+      height: rem(48);
       margin-top: 0;
     }
   }
 }
 
-// -- highlighting focus word -- //
-
-%focus {
-  background-color: $primary-light;
-  padding: 0 rem(3);
-  border-radius: 3px;
-}
-
-.h2,
-.h3 {
-  strong {
-    @extend %focus;
-  }
-}
-
-.focus {
-  @extend %focus;
-}
-
 // -- list styling -- //
 
 .unordered-list,
-.pattern__use ul,
-.pattern__accessebility ul {
+ul {
   margin-left: $size-l;
   li {
+    margin-bottom: $space-text;
     &::marker {
       color: $primary;
-      font-size: var(--fs-base);
+      font-size: $font-size-base;
     }
   }
 }
 
-// -- code -- //@
+// -- code -- //
 code {
-  background-color: hsla(203, 89%, 46%, 0.1);
-  border-radius: $border-radius;
+  background-color: $primary-light;
+  border-radius: $border-radius-small;
+  color: $primary;
 }

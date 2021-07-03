@@ -8,7 +8,6 @@
 
   @include change-at("desktop") {
     padding: $size-l $size-xxl;
-    border-bottom: 1px solid $line-color;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

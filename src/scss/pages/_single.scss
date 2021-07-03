@@ -1,24 +1,15 @@
 .pattern {
   display: grid;
-  grid-template-columns: rem(16) auto rem(16);
-  grid-template-rows: min-content rem(624) rem(150) auto;
+  grid-template-columns: rem(16) calc(100% - 2rem) rem(16);
+  grid-template-rows: rem(624) rem(150) auto;
 
   @include change-at("desktop") {
     grid-template-columns: rem(64) auto rem(941) auto rem(64);
   }
 
-  &__headline {
-    grid-column: 2 / span 1;
-
-    @include change-at("desktop") {
-      grid-column: 3 / span 1;
-      margin-bottom: rem(64);
-    }
-  }
-
   &__preview {
     grid-column: 1 / span 3;
-    grid-row: 2 / span 2;
+    grid-row: 1 / span 2;
 
     @include change-at("desktop") {
       grid-column: 2 / span 3;
@@ -31,20 +22,19 @@
 
   &__info {
     grid-column: 2 / span 1;
-    grid-row: 3 / min-content;
-    padding: rem(16) rem(32);
+    grid-row: 2 / min-content;
+    //padding: rem(16) rem(32);
+    padding: clamp(#{rem(16)}, 3.4vw, #{rem(64)})
+      clamp(#{rem(32)}, 6.5vw, #{rem(121)});
 
     background-color: #fff;
     border-radius: $border-radius $border-radius 0 0;
-
-    display: grid;
-    gap: rem(64);
 
     z-index: 1;
 
     @include change-at("desktop") {
       grid-column: 3 / span 1;
-      padding: rem(64) rem(121);
+      //padding: rem(64) rem(121);
     }
   }
 
@@ -60,7 +50,6 @@
   &__resizeable {
     position: relative;
     padding: rem(16) rem(16) 0;
-    border-radius: $border-radius $border-radius 0 0;
     background: var(--gradient-main);
     height: 100%;
     display: flex;

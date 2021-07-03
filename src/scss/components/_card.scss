@@ -5,7 +5,7 @@
   max-width: 80vw;
   border-radius: $border-radius;
   border: 1px solid $line-color;
-  @include card-shadow();
+  box-shadow: $box-shadow;
   transition: all 0.3s ease-in-out;
 
   @include change-at("tablet") {

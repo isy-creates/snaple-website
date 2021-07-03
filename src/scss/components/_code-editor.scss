@@ -1,11 +1,9 @@
 .code__tab {
-  height: calc(100% - 48px);
-  max-height: rem(364);
+  max-height: calc(100% + 48px);
   margin: 0 !important;
 
   .uagb-tabs__body-wrap {
     padding: 0 !important;
-    //height: calc(100% - 54px);
     border-width: 0 !important;
   }
 
@@ -13,10 +11,10 @@
     height: rem(313);
     margin: 0;
     padding: $size-m;
-    font-family: "Fira Code", monospace;
-    color: #fff;
-    background-color: var(--text-color);
-    border-radius: 0 rem(10) 0 0;
+    font-family: $font-family-headline;
+    color: $white;
+    background-color: $headline-color;
+    border-radius: 0 $border-radius 0 0;
     overflow: auto;
 
     &::-webkit-scrollbar {
@@ -25,9 +23,9 @@
     }
 
     &::-webkit-scrollbar-track {
-      background-color: var(--text-color);
+      background-color: $headline-color;
       border-radius: 3px;
-      border-right: 2px solid var(--text-color);
+      border-right: 2px solid $headline-color;
     }
     &::-webkit-scrollbar-thumb {
       background: #ffffff;
@@ -63,7 +61,7 @@
       }
 
       &.uagb-tabs__active {
-        background-color: var(--text-color) !important;
+        background-color: $headline-color !important;
         font-weight: 700;
         border-width: 0 !important;
         box-shadow: none;
@@ -86,7 +84,7 @@
     padding: $size-s;
     border-radius: 0 0 rem(10) rem(10) !important;
     background: var(--gradient-main);
-    @include card-shadow();
+    box-shadow: $box-shadow;
     position: relative;
     overflow: hidden;
     transition: all 0.3s;
@@ -112,7 +110,6 @@
     }
 
     &:hover {
-      @include card-shadow-hover();
       &::after {
         left: 0;
       }

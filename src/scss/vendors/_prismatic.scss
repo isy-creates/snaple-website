@@ -6,8 +6,10 @@
 }
 code[class*="language-"],
 pre[class*="language-"] {
+  background-color: $headline-color;
+  font-family: $font-family-headline;
+  margin: 0 0 $space-text 0;
   text-shadow: none;
-  font-family: "Fira Code", monospace;
 }
 
 .token.property,

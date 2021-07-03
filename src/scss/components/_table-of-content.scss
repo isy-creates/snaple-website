@@ -1,0 +1,22 @@
+.table-of-content {
+  list-style-type: none;
+  li {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: underline;
+
+    &:before {
+      background-image: url("../images/hash.svg");
+      background-size: contain;
+      content: "";
+      display: inline-block;
+      height: rem(18);
+      margin-right: rem(8);
+      width: rem(14);
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: rem(24);
+    }
+  }
+}
