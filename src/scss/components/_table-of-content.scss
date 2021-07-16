@@ -10,13 +10,13 @@
       background-size: contain;
       content: "";
       display: inline-block;
-      height: rem(18);
-      margin-right: rem(8);
+      height: var(--space-xs);
+      margin-right: var(--space-xxs);
       width: rem(14);
     }
 
     &:not(:last-of-type) {
-      margin-bottom: rem(24);
+      margin-bottom: var(--space-sm);
     }
   }
 }

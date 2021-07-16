@@ -14,19 +14,19 @@ $width-three-fourth: 75%;
 
 .height {
   &--8 {
-    height: $size-8;
+    height: var(--size-xxs);
   }
   &--16 {
-    height: $size-16;
+    height: var(--size-xs);
   }
   &--24 {
-    height: $size-24;
+    height: var(--size-sm);
   }
   &--32 {
-    height: $size-32;
+    height: var(--size-md);
   }
   &--40 {
-    height: $size-40;
+    height: var(--size-lg);
   }
   &--240 {
     height: $size-240;
@@ -35,13 +35,13 @@ $width-three-fourth: 75%;
 
 .width {
   &--one-fourth {
-    width: $width-one-fourth;
+    width: 25%;
   }
   &--half {
-    width: $width-half;
+    width: 50%;
   }
   &--three-fourth {
-    width: $width-three-fourth;
+    width: 75%;
   }
   &--small {
     width: 80px;
@@ -65,7 +65,7 @@ $width-three-fourth: 75%;
 }
 
 .is-small {
-  height: $size-8;
+  height: var(--size-xxs);
   width: $width-one-fourth;
   background-color: var(--text-color);
   border-radius: var(--border-radius-round);
@@ -73,18 +73,18 @@ $width-three-fourth: 75%;
 
 .is-h1 {
   background-color: var(--headline-color);
-  height: $size-32;
+  height: var(--size-md);
   width: $width-half;
   border-radius: var(--border-radius-round);
 }
 
 .is-p {
   background-color: var(--text-color);
-  height: $size-16;
+  height: var(--size-xs);
   border-radius: var(--border-radius-round);
 
   &:last-of-type {
-    margin-top: $size-8;
+    margin-top: var(--size-xxs);
   }
 }
 
@@ -121,6 +121,6 @@ $width-three-fourth: 75%;
 }
 
 .preview {
-  background-color: #fff;
+  background-color: var(--white);
   box-shadow: var(--box-shadow);
 }

@@ -77,7 +77,6 @@
 
     &:hover {
       &:after {
-        @extend %after;
         border-bottom: 2px solid var(--primary);
         animation: hover 0.3s;
         margin-bottom: -27px;

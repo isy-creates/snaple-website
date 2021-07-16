@@ -1,12 +1,12 @@
 @import "base/_reset";
 
 @import "abstracts/rem-coverter";
+@import "abstracts/mixins/make-grid.scss";
 @import "abstracts/variables";
 @import "base/breakpoints";
 @import "abstracts/animations";
 @import "abstracts/colors";
 
-@import "vendors/swiper";
 @import "vendors/prismatic";
 
 @import "base/fonts";
@@ -22,6 +22,7 @@
 @import "components/messages";
 @import "components/handle";
 @import "components/table-of-content";
+@import "components/decolines";
 
 @import "layout/header";
 @import "layout/footer";
@@ -32,3 +33,5 @@
 
 @import "../../node_modules/swiper/swiper.scss";
 @import "../../node_modules/swiper/components/pagination/pagination.scss";
+
+@import "vendors/swiper";

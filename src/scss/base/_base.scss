@@ -1,20 +1,43 @@
-::selection {
-  background-color: $primary;
-  color: $white;
+:root {
+  //spacing
+  --base: 1rem;
+  --space-xxs: 0.5rem; //8
+  --space-xs: 0.875rem; //14
+  --space-base: 1rem; //16
+  --space-sm: 1.5rem; //24
+  --space-md: 2rem; //32
+  --space-lg: 2.5rem; // 40
+  --space-xl: 4rem; //64
+  --space-xxl: 6rem; //96
+  --component-padding: var(--space-sm);
+
+  --fs-base: #{$space-text};
+  //colors
+  --primary: hsl(205, 91%, 41%);
+  --primary-light: hsl(205, 89%, 86%);
+  --text-color: hsl(205, 12%, 37%);
+  --headline-color: hsl(205, 72%, 27%);
+  --border-radius-element: #{rem(5)};
+  --border-radius-round: #{rem(20)};
+  --line-color: hsl(205, 27%, 75%);
+  --white: hsl(205, 100%, 100%);
+  --gradient-main: linear-gradient(
+    218deg,
+    hsl(203, 89%, 46%) 0%,
+    hsl(195, 100%, 63%) 100%
+  );
+  --gradient-background: linear-gradient(
+    218deg,
+    hsl(195, 100%, 63%) 0%,
+    hsl(203, 89%, 83%) 100%
+  );
+  --box-shadow: 0 2px 8px -1px hsla(203, 72%, 39%, 0.3),
+    0 1px 2px -1px hsla(203, 72%, 39%, 0.2), 0 1px 0 0 hsla(203, 72%, 39%, 0.1);
 }
 
-:root {
-  --fs-base: #{$space-text};
-  --primary: #{$primary};
-  --text-color: #{$text-color};
-  --headline-color: hsl(203, 89%, 66%);
-  --border-radius-element: #{$border-radius-small};
-  --border-radius-round: #{border-radius-element};
-  --line-color: #{$line-color};
-  --white: #{$white};
-  --gradient-main: #{$gradient-main};
-  --gradient-background: #{$gradient-background};
-  --box-shadow: #{$box-shadow};
+::selection {
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 html {
@@ -22,10 +45,17 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  font-family: $font-family-base;
+  font-size: var(--space-base);
+  color: var(--text-color);
 }
 
 .main {
-  min-width: 0; /*to prevent grid blowout*/
-  overflow: hidden;
+  @include make-grid();
+  box-shadow: inset -1px 0 0 0 var(--line-color);
+  margin: 0 var(--space-base);
+  max-width: rem(1440);
+  min-width: 0; /*prevent grid blowout*/
+  padding-bottom: var(--space-xl);
+  position: relative;
 }

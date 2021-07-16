@@ -15,12 +15,4 @@
   <header class="header">
     <?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
 
-
-
-    <?php wp_nav_menu( array(
-      'theme_location' => 'header-menu',
-      'container' => 'ul',
-      'menu_class' => 'menu',
-      'menu_id' => 'main-navigation'
-    )); ?>
   </header>

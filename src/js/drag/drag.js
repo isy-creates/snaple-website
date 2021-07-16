@@ -2,7 +2,9 @@ export default function drag() {
   var element = document.querySelector(".pattern__preview");
   var handle = document.querySelector("#handle");
 
-  handle.addEventListener("mousedown", initResize, false);
+  if (handle) {
+    handle.addEventListener("mousedown", initResize, false);
+  }
 
   //Window funtion mousemove & mouseup
   function initResize(e) {

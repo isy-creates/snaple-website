@@ -10,11 +10,11 @@
   pre {
     height: rem(313);
     margin: 0;
-    padding: $size-m;
+    padding: var(--space-xs);
     font-family: $font-family-headline;
-    color: $white;
-    background-color: $headline-color;
-    border-radius: 0 $border-radius 0 0;
+    color: var(--white);
+    background-color: var(--headline-color);
+    border-radius: 0 var(--border-radius-element) 0 0;
     overflow: auto;
 
     &::-webkit-scrollbar {
@@ -23,13 +23,13 @@
     }
 
     &::-webkit-scrollbar-track {
-      background-color: $headline-color;
+      background-color: var(--headline-color);
       border-radius: 3px;
-      border-right: 2px solid $headline-color;
+      border-right: 2px solid var(--headline-color);
     }
     &::-webkit-scrollbar-thumb {
       background: #ffffff;
-      border-radius: $border-radius;
+      border-radius: var(--border-radius-element);
       border-right: 2px solid var(--text-color);
       border-top: 2px solid var(--text-color);
     }
@@ -53,15 +53,15 @@
     .uagb-tab {
       border-radius: rem(10) rem(10) 0 0 !important;
       border: none !important;
-      box-shadow: inset 0 0 0 1px $line-color;
-      padding: $size-m $size-m rem(10) !important;
+      box-shadow: inset 0 0 0 1px var(--line-color);
+      padding: var(--space-xs) var(--space-xs) rem(10) !important;
 
       span {
         color: var(--text-color) !important;
       }
 
       &.uagb-tabs__active {
-        background-color: $headline-color !important;
+        background-color: var(--headline-color) !important;
         font-weight: 700;
         border-width: 0 !important;
         box-shadow: none;
@@ -81,10 +81,10 @@
 
   .copy__link {
     display: block;
-    padding: $size-s;
+    padding: var(--space-xxs);
     border-radius: 0 0 rem(10) rem(10) !important;
     background: var(--gradient-main);
-    box-shadow: $box-shadow;
+    box-shadow: var(--box-shadow);
     position: relative;
     overflow: hidden;
     transition: all 0.3s;
@@ -93,7 +93,7 @@
     text-align: center;
     &::before {
       content: url("../images/call-to-action-white.svg");
-      margin-right: var(--spacer);
+      margin-right: var(--space-xs);
     }
 
     &::after {

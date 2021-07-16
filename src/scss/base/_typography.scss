@@ -1,12 +1,5 @@
 // -- global font stylings -- //
 
-body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: 1.8;
-  color: $text-color;
-}
-
 h1,
 .h1,
 h2,
@@ -17,32 +10,29 @@ h4,
 .h4,
 h5,
 .h5 {
-  color: $headline-color;
+  color: var(--headline-color);
   font-family: $font-family-headline;
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2;
-  margin-bottom: $space-text;
+  margin-bottom: var(--space-base);
   position: relative;
 }
 
 h1,
 .h1 {
-  font-size: $font-size-h1;
+  font-size: clamp(var(--space-md), 3vw, var(--space-lg));
 }
 
 h2,
-.h2 {
-  font-size: $font-size-h2;
-}
-
+.h2,
 h3,
 .h3 {
-  font-size: $font-size-h3;
+  font-size: clamp(var(--space-sm), 3vw, var(--space-md));
 }
 
-h2,
-h3 {
+.single h2,
+.single h3 {
   &:before {
     bottom: 0;
     content: url("../images/hash.svg");
@@ -53,10 +43,9 @@ h3 {
 }
 
 p {
-  margin-bottom: $space-text;
+  margin-bottom: var(--space-base);
   &.has-medium-font-size {
-    font-size: $font-size-large;
-    margin-bottom: $space-section;
+    font-size: var(--space-sm);
   }
 }
 
@@ -66,26 +55,22 @@ code {
 }
 
 .small {
-  font-size: $font-size-small;
-}
-
-h2,
-h3 {
-  margin-top: $space-section;
+  font-size: var(--space-xs);
 }
 
 // -- pipe after h1-- //
 
+h1,
 .h1 {
   position: relative;
 
   &:after {
-    background-color: $primary-light;
-    border: 1px solid $primary-light;
-    border-radius: $border-radius;
+    background-color: var(--primary-light);
+    border: 1px solid var(--primary-light);
+    border-radius: var(--border-radius-element);
     content: "";
-    height: $s32;
-    margin-left: $s8;
+    height: var(--space-md);
+    margin-left: var(--space-xxs);
     margin-top: rem(3);
     position: absolute;
     width: 1px;
@@ -101,21 +86,20 @@ h3 {
 
 // -- list styling -- //
 
-.unordered-list,
-ul {
-  margin-left: $size-l;
+.unordered-list {
+  margin-left: var(--space-sm);
   li {
-    margin-bottom: $space-text;
+    margin-bottom: var(--space-base);
     &::marker {
-      color: $primary;
-      font-size: $font-size-base;
+      color: var(--primary);
+      font-size: var(--space-base);
     }
   }
 }
 
 // -- code -- //
 code {
-  background-color: $primary-light;
-  border-radius: $border-radius-small;
-  color: $primary;
+  background-color: var(--primary-light);
+  border-radius: var(-border-radius-element);
+  color: var(--primary);
 }

@@ -1,26 +1,30 @@
 .footer {
   display: flex;
   flex-direction: column;
-  padding: $size-l 0;
 
   @include change-at("tablet") {
     flex-direction: row;
     justify-content: space-between;
-    border-top: 1px solid $line-color;
-    padding: $size-l $size-m;
+    border-top: 1px solid var(--line-color);
+    padding: var(--space-lg) var(--space-xl);
   }
 
   @include change-at("desktop") {
-    padding: $size-l $size-xxl;
+    padding: var(--space-md) var(--space-xl);
   }
 
   &-menu {
+    display: flex;
+    list-style-type: none;
     text-align: center;
+    li:not(:last-of-type) {
+      margin-right: var(--space-xs);
+    }
   }
 
   &-social {
     text-align: center;
-    padding: $size-l $size-m 0;
+    padding: var(--size-lg) var(--size-xs) 0;
 
     @include change-at("tablet") {
       padding: 0;
@@ -31,7 +35,7 @@
       height: auto;
 
       &--github {
-        margin-right: $size-m;
+        margin-right: var(--size-xs);
         &:hover {
           path {
             stroke: var(--primary);

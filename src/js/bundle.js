@@ -25,10 +25,10 @@ const swiper = new Swiper(".swiper-container", {
     },
     1340: {
       slidesPerView: 3,
-      spaceBetween: 24
+      spaceBetween: 32
     }
   },
-  threshold: 5,
+  threshold: 3,
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",

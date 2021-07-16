@@ -1,55 +1,65 @@
 <?php get_header(); ?>
 
-<main class="main">
+<main class="main frontpage">
 
-  <section class="section">
-    <div class="section__intro">
-      <h1 class="headline h1"><?php the_field('headline'); ?></h1>
-      <p class="text"><?php the_field('introtext'); ?></p>
-    </div>
-
+  <section class="section frontpage__intro">
+    <h1><?php the_field('headline'); ?></h1>
+    <h2>testtest</h2>
+    <p class="has-medium-font-size"><?php the_field('introtext'); ?></p>
   </section>
-  <section class="section section__pattern">
-    <h2 class="headline h2">Latest <span class="focus">pattern</span></h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <?php 
-          $homepagePosts = new WP_Query(array(
-            'posts_per_page' => 5
-          ));
+  <section class="section frontpage__articles">
+    <?php
 
-          while ( $homepagePosts->have_posts() ) {
-            $homepagePosts->the_post(); 
-            $categories = get_the_category(); 
-            $cat_name = lcfirst($categories[0]->cat_name);
-          ?>
+      $args = array( 
+          'posts_per_page' => -1
+      );
+  
+      $query = new WP_Query($args);   
+      $q = array();
+  
+      while ( $query->have_posts() ) { 
+  
+          $query->the_post(); 
 
-        <a href="<?php the_permalink(); ?>" aria-label="content pattern"
-          class="card cc <?php echo $cat_name  ?> swiper-slide">
-          <div class="card__head card__head cc__background">
-            <?php the_post_thumbnail(); ?>
-          </div>
-          <div class="card__body">
-            <div class="tagline">
-              <?php 
-                  $posttags = get_the_tags(); 
-                  if ($posttags) {
-                    foreach($posttags as $tag) {
-                      echo "<span class=\"tag\">" . $tag->name . '</span>'; 
-                    }
-                  }
-                ?>
-            </div>
-            <h3 class="headline h3 card__headline"><?php the_title(); ?></h3>
-            <div class="card__link">View <?php the_title(); ?></div>
-          </div>
-        </a>
-        <?php } wp_reset_postdata();
-          ?>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
+          
+          $a = '<a href="'. get_permalink() .'"></a>'. get_the_post_thumbnail() .'<h4>' . get_the_title() .'</h4>';
+  
+          $categories = get_the_category();
+  
+          foreach ( $categories as $key=>$category ) {
+  
+              $b = '<li class="layout__headline '. strtolower($category->name) . '"><h3>' . $category->name . '</h3></li>';      
+  
+          }
+  
+          $q[$b][] = $a; // Create an array with the category names and post titles
+      }
+  
+      /* Restore original Post Data */
+      wp_reset_postdata();
+
+
+  
+      foreach ($q as $key=>$values) {
+  
+          echo '<ul class="layout">';
+          echo $key;
+              foreach ($values as $value){
+                  echo '<li class="layout__content">' . $value . '</li>';
+              }
+          echo '</ul>';
+      }
+    ?>
   </section>
 
+  <div class="decolines">
+    <span class="decoline"></span>
+    <span class="decoline"></span>
+    <span class="decoline"></span>
+    <span class="decoline"></span>
+    <span class="decoline"></span>
+    <span class="decoline"></span>
+  </div>
+</main>
 
-  <?php get_footer(); ?>
+<?php get_footer(); ?>

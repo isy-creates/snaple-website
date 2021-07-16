@@ -31,6 +31,26 @@ $size-l: rem(24); // 24
 $size-xl: rem(40); //40
 $size-xxl: rem(64); // 64
 
+$base-size: 1rem !default;
+$sizes: (
+  0: 0,
+  1: $base-size * 0.25,
+  //4
+  2: $base-size * 0.5,
+  //8
+  3: $base-size,
+  //16
+  4: $base-size * 1.5,
+  //24
+  5: $base-size * 2.5,
+  //40
+  6: $base-size * 3,
+  //48
+  7: $base-size * 6,
+  //64
+  8: $base-size * 6.5 //104
+);
+
 //8, 12, 14, 16, 18, 20, 24, 32, 40, 64
 
 $s8: rem(8);
@@ -43,10 +63,11 @@ $s24: rem(24);
 $s32: rem(32);
 $s40: rem(40);
 $s64: rem(64);
+$s96: rem(96);
 
 // ~~ SPACE ~~ //
 
-$space-text: $s24;
+$space-text: $s16;
 $space-section: $s64;
 
 // ~~ TEXT ~~ //
@@ -64,5 +85,4 @@ $font-size-h3: clamp($s20, 10vw, $s24);
 // ~~ Various
 $border-radius: rem(10);
 $border-radius-small: rem(3);
-
-//Naming Convention:
+$container-width: rem(1440);
