@@ -3,7 +3,7 @@
   --base: 1rem;
   --space-xxs: 0.5rem; //8
   --space-xs: 0.875rem; //14
-  --space-base: 1rem; //16
+  --space-base: 1.125rem; //18
   --space-sm: 1.5rem; //24
   --space-md: 2rem; //32
   --space-lg: 2.5rem; // 40
@@ -14,12 +14,13 @@
   --fs-base: #{$space-text};
   //colors
   --primary: hsl(205, 91%, 41%);
-  --primary-light: hsl(205, 89%, 86%);
+  --primary-light: hsl(203, 90%, 96%);
   --text-color: hsl(205, 12%, 37%);
   --headline-color: hsl(205, 72%, 27%);
   --border-radius-element: #{rem(5)};
   --border-radius-round: #{rem(20)};
   --line-color: hsl(205, 27%, 75%);
+  --background-line-color: hsl(206, 32%, 93%);
   --white: hsl(205, 100%, 100%);
   --gradient-main: linear-gradient(
     218deg,
@@ -52,8 +53,8 @@ body {
 
 .main {
   @include make-grid();
-  box-shadow: inset -1px 0 0 0 var(--line-color);
-  margin: 0 var(--space-base);
+  box-shadow: inset -1px 0 0 0 var(--background-line-color);
+  //margin: 0 var(--space-base);
   max-width: rem(1440);
   min-width: 0; /*prevent grid blowout*/
   padding-bottom: var(--space-xl);

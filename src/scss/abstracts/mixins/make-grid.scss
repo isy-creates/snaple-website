@@ -1,7 +1,7 @@
 @mixin make-grid() {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+  //width: 100%;
 
   @include change-at("tablet") {
     grid-template-columns: repeat(3, 1fr);

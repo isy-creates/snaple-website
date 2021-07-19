@@ -31,8 +31,7 @@ h3,
   font-size: clamp(var(--space-sm), 3vw, var(--space-md));
 }
 
-.single h2,
-.single h3 {
+.single h2 {
   &:before {
     bottom: 0;
     content: url("../images/hash.svg");

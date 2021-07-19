@@ -7,7 +7,7 @@
     <h2>testtest</h2>
     <p class="has-medium-font-size"><?php the_field('introtext'); ?></p>
   </section>
-  <section class="section frontpage__articles">
+  <section class="section frontpage__articles js-hover">
     <?php
 
       $args = array( 
@@ -52,14 +52,7 @@
     ?>
   </section>
 
-  <div class="decolines">
-    <span class="decoline"></span>
-    <span class="decoline"></span>
-    <span class="decoline"></span>
-    <span class="decoline"></span>
-    <span class="decoline"></span>
-    <span class="decoline"></span>
-  </div>
+  <?php include 'decolines.php'; ?>
 </main>
 
 <?php get_footer(); ?>

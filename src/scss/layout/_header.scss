@@ -1,3 +1,8 @@
 .header {
-  border-bottom: 1px solid var(--line-color);
+  border-bottom: 1px solid var(--background-line-color);
+  padding: var(--space-lg) var(--space-xl);
+
+  @include change-at("desktop") {
+    padding: var(--space-md) var(--space-xl);
+  }
 }

@@ -7,12 +7,12 @@
 
     &:before {
       background-image: url("../images/hash.svg");
+      background-repeat: no-repeat;
       background-size: contain;
       content: "";
       display: inline-block;
       height: var(--space-xs);
-      margin-right: var(--space-xxs);
-      width: rem(14);
+      width: var(--space-xs);
     }
 
     &:not(:last-of-type) {

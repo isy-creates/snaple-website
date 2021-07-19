@@ -1,0 +1,13 @@
+.wp-block-group {
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+  &:not(:last-of-type) {
+    border-bottom: 1px solid var(--background-line-color);
+    margin-bottom: clamp(var(--space-lg), 5vw, var(--space-xl));
+    padding-bottom: clamp(var(--space-lg), 5vw, var(--space-xl));
+  }
+  @include change-at("desktop") {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -39,6 +39,7 @@
     &__content {
       border-bottom: 1px solid var(--line-color);
       position: relative;
+      transition: all 0.3s ease-in-out;
 
       &:nth-of-type(7th) {
         border-color: transparent;
@@ -63,18 +64,28 @@
         margin-bottom: 0;
         padding: rem(4);
         text-align: center;
+        transition: all 0.3s ease-in-out;
 
         &::after {
           color: var(--line-color);
           content: "→";
           font-size: rem(24);
           margin-left: var(--space-xxs);
+          transition: all 0.3s ease-in-out;
         }
       }
 
       img {
         max-height: rem(202);
         padding: var(--space-lg);
+      }
+
+      &:hover {
+        h4 {
+          &::after {
+            color: var(--primary);
+          }
+        }
       }
     }
 

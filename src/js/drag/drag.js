@@ -13,7 +13,8 @@ export default function drag() {
   }
   //resize the element
   function Resize(e) {
-    element.style.width = e.clientX - element.offsetLeft + "px";
+    console.log(e);
+    element.style.width = width - element.offsetLeft + "px";
   }
   //on mouseup remove windows functions mousemove & mouseup
   function stopResize(e) {

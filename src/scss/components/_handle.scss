@@ -1,35 +1,35 @@
-@include change-at("desktop") {
-  #handle {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: var(--space-xs);
-    background-color: transparent;
-    z-index: 1;
-    padding-right: rem(6);
+// @include change-at("desktop") {
+//   #handle {
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     width: var(--space-xs);
+//     background-color: transparent;
+//     z-index: 1;
+//     padding-right: rem(6);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
 
-    &:after {
-      content: "";
-      display: inline-block;
-      width: 3px;
-      height: var(--space-lg);
-      background-color: var(--white);
-    }
-    &:before {
-      content: "";
-      display: inline-block;
-      width: 3px;
-      height: var(--space-lg);
-      background-color: var(--white);
-    }
+//     &:after {
+//       content: "";
+//       display: inline-block;
+//       width: 3px;
+//       height: var(--space-lg);
+//       background-color: var(--white);
+//     }
+//     &:before {
+//       content: "";
+//       display: inline-block;
+//       width: 3px;
+//       height: var(--space-lg);
+//       background-color: var(--white);
+//     }
 
-    &:hover {
-      cursor: col-resize;
-    }
-  }
-}
+//     &:hover {
+//       cursor: col-resize;
+//     }
+//   }
+// }
