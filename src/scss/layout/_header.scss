@@ -1,8 +1,37 @@
 .header {
   border-bottom: 1px solid var(--background-line-color);
-  padding: var(--space-lg) var(--space-xl);
+  display: grid;
+  gap: var(--space-base);
+  padding: var(--space-base) var(--space-base);
 
   @include change-at("desktop") {
-    padding: var(--space-md) var(--space-xl);
+    align-items: center;
+    grid-template-columns: rem(64) auto rem(960) auto rem(64);
+    padding: var(--space-base) 0;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  @include change-at("desktop") {
+    grid-column: 2 / span 1;
+    justify-content: flex-start;
+  }
+}
+
+.custom-logo-link {
+  display: block;
+  .custom-logo {
+    width: 100%;
+    @include change-at("desktop") {
+      width: auto;
+    }
+  }
+}
+
+.searchform {
+  @include change-at("desktop") {
+    grid-column: 3 / span 1;
   }
 }

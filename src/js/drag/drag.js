@@ -1,6 +1,6 @@
 export default function drag() {
-  var element = document.querySelector(".pattern__preview");
-  var handle = document.querySelector("#handle");
+  const element = document.querySelector(".pattern__preview");
+  const isResized = false;
 
   if (handle) {
     handle.addEventListener("mousedown", initResize, false);
@@ -10,10 +10,11 @@ export default function drag() {
   function initResize(e) {
     window.addEventListener("mousemove", Resize, false);
     window.addEventListener("mouseup", stopResize, false);
+    window.addEventListener("resize", removeWidth, false);
   }
   //resize the element
   function Resize(e) {
-    console.log(e);
+    isResized = true;
     element.style.width = width - element.offsetLeft + "px";
   }
   //on mouseup remove windows functions mousemove & mouseup
@@ -21,7 +22,12 @@ export default function drag() {
     window.removeEventListener("mousemove", Resize, false);
     window.removeEventListener("mouseup", stopResize, false);
   }
-}
 
-//was bedeutet false?
-//
+  function removeWidth() {
+    console.log("resize");
+    if (isResized) {
+      console.log("test");
+      element.style.width = 0 + "auto";
+    }
+  }
+}

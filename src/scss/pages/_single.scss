@@ -1,12 +1,22 @@
 .pattern {
   &__preview {
     grid-column: 1 / -1;
+    position: relative;
 
     @include change-at("desktop") {
       //resize div on both sides at the same time
       justify-self: center;
       //initial keep the width before resize
       width: 100%;
+
+      &:after{
+        bottom: 20px;
+        content:'Resize me!';
+        font-size: rem(14);
+        position: absolute;
+        right:-46px;
+        transform: rotate(-90deg);
+      }
     }
   }
 
@@ -47,36 +57,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    resize: horizontal;
     overflow: auto;
+
+    @include change-at("desktop") {
+      resize: horizontal;
+    }
+
+    @media only screen and (max-width: 1440px) {
+      width: auto !important;
+    }
   }
 }
 
 .codepen {
   display: flex;
   justify-content: center;
-  margin-top: rem(48);
-  &__link {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    padding: rem(13) 0;
-
-    &:hover {
-      &:after {
-        border-bottom: 2px solid var(--primary);
-        animation: hover 0.3s;
-        margin-bottom: -27px;
-      }
-    }
-
-    &::before {
-      content: "";
-      background-image: url("../images/call-to-action.svg");
-      background-repeat: no-repeat;
-      height: 14px;
-      width: 12px;
-      margin-right: var(--spacer);
-    }
+  margin-top: var(--space-base);
+  position: relative;
+  align-items: center;
+  &::before {
+    content: "";
+    background-image: url("../images/call-to-action.svg");
+    background-repeat: no-repeat;
+    height: 14px;
+    width: 12px;
+    margin-right: var(--spacer);
   }
+
 }

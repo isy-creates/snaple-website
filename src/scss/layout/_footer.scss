@@ -7,11 +7,11 @@
     flex-direction: row;
     justify-content: space-between;
 
-    padding: var(--space-lg) var(--space-xl);
+    padding: var(--space-base) var(--space-xl);
   }
 
   @include change-at("desktop") {
-    padding: var(--space-md) var(--space-xl);
+    padding: var(--space-base) var(--space-xl);
   }
 
   &-menu {

@@ -39,5 +39,4 @@ const swiper = new Swiper(".swiper-container", {
 
 new Resize();
 new Copy();
-//ew Drag();
 new Hover();

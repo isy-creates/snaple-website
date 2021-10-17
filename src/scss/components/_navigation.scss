@@ -1,0 +1,103 @@
+%after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+}
+
+.menu {
+  position: relative;
+  display: grid;
+  grid-gap: 0 $size-xl;
+  grid-auto-flow: column;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  margin-left: $size-m;
+  list-style-type: none;
+
+  padding-bottom: $size-l;
+  border-bottom: 1px solid $line-color;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include change-at("desktop") {
+    border: none;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+}
+
+.current-menu-item,
+.current-menu-parent {
+  position: relative;
+  &:after {
+    @extend %after;
+    border-bottom: 2px solid var(--primary);
+    bottom: 0;
+  }
+}
+
+.page_item,
+.menu-item {
+  position: relative;
+  &:hover {
+    &:after {
+      @extend %after;
+      border-bottom: 2px solid var(--primary);
+      bottom: 0;
+      animation: hover 0.3s;
+    }
+  }
+}
+
+//Specific Styling for Footer
+.footer {
+  .menu {
+    border-top: 1px solid $line-color;
+    border-bottom: 0;
+    padding: $size-l $size-m 0;
+    margin-left: 0;
+    overflow: visible;
+
+    @include change-at("tablet") {
+      border-top: 0;
+      padding: 0;
+    }
+  }
+
+  //Change current-page-indicator to top
+  .current_page_item {
+    position: relative;
+    &:after {
+      @extend %after;
+      border-bottom: 2px solid var(--primary);
+      top: -24px;
+
+      @include change-at("desktop") {
+        bottom: -34px;
+      }
+    }
+  }
+
+  .page_item,
+  .menu-item {
+    position: relative;
+    &:hover {
+      &:after {
+        @extend %after;
+        border-top: 1px solid var(--primary);
+        top: -24px;
+        animation: hover 0.3s;
+
+        @include change-at("landscape") {
+          top: -18px;
+        }
+      }
+    }
+  }
+}

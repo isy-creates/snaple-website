@@ -1,0 +1,82 @@
+div.asl_w {
+  align-items: center;
+  display: flex;
+  height: rem(48);
+}
+
+#ajaxsearchlite1 {
+  .probox {
+    padding: 0 var(--base);
+    width: 100%;
+  }
+}
+
+div.asl_m .probox .proinput input::-webkit-input-placeholder {
+  opacity: 1;
+}
+div.asl_w .probox .proinput input::-webkit-input-placeholder {
+  color: var(--text-color) !important;
+  font-size: var(--space-xs);
+}
+
+//Search Results
+div.asl_r {
+  .results {
+    .item {
+      .asl_content {
+        align-items: center;
+        display: flex;
+        padding: var(--base) 0;
+        h3 {
+          a {
+            &:hover {
+              color: var(--primary);
+              font-size: inherit;
+              font-weight: inherit;
+              text-shadow: none;
+            }
+          }
+        }
+      }
+      &.hovered {
+        background-color: var(--white);
+      }
+    }
+  }
+}
+
+div.asl_r.asl_w.vertical .results .item::after {
+  background: var(--line-color) !important;
+}
+
+div.asl_r .results .item .asl_content h3,
+div.asl_r .results .item .asl_content h3 a {
+  font-size: var(--space-base);
+  color: var(--headline-color);
+}
+
+div.asl_r .results .item .asl_image {
+  margin: 0 var(--base) 0 0;
+}
+
+div.asl_r .results .item {
+  padding: 0;
+}
+
+div.asl_r.vertical {
+  padding: var(--base);
+}
+
+//close button
+div.asl_m .probox .proclose svg {
+  background: var(--headline-color);
+  fill: var(--white) !important;
+}
+
+//Input Box Text
+#ajaxsearchlite1 .probox .proinput input,
+div.asl_w .probox .proinput input {
+  color: var(--text-color) !important;
+  font-size: var(--space-base);
+  text-shadow: none;
+}

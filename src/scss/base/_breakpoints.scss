@@ -1,16 +1,19 @@
 $breakpoints: (
   "mobile": (
-    min-width: 360px
+    min-width: 360px,
+  ),
+  "landscape": (
+    min-width: 769px,
   ),
   "tablet": (
-    min-width: 768px
+    min-width: 768px,
   ),
   "laptop": (
-    min-width: 1024px
+    min-width: 1024px,
   ),
   "desktop": (
-    min-width: 1440px
-  )
+    min-width: 1440px,
+  ),
 ) !default;
 
 /// Mixin to manage responsive breakpoints

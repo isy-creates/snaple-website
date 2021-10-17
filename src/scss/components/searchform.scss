@@ -1,0 +1,22 @@
+.searchform {
+  height: rem(48);
+  position: relative;
+  input {
+    border: 1px solid var(--line-color);
+    width: 100%;
+    padding: rem(12);
+    &::placeholder {
+      color: var(--line-color);
+    }
+  }
+
+  #searchsubmit {
+    background: none;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    right: rem(16);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

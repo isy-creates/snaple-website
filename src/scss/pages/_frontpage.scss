@@ -18,7 +18,7 @@
 
   .layout {
     @include make-grid();
-    border-top: 1px solid var(--line-color);
+    border-top: 1px solid var(--background-line-color);
     list-style-type: none;
 
     &__headline {
@@ -37,7 +37,7 @@
     }
 
     &__content {
-      border-bottom: 1px solid var(--line-color);
+      border-bottom: 1px solid var(--background-line-color);
       position: relative;
       transition: all 0.3s ease-in-out;
 
@@ -56,7 +56,7 @@
 
       h4 {
         align-items: center;
-        border-top: 1px solid var(--line-color);
+        border-top: 1px solid var(--background-line-color);
         color: var(--text-color);
         display: flex;
         justify-content: center;

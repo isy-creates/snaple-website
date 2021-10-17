@@ -9,7 +9,7 @@ class Resize {
   }
 
   initObserver() {
-    let ro = new ResizeObserver(entries => {
+    let ro = new ResizeObserver((entries) => {
       for (let entry of entries) {
         let width = entry.contentRect.width;
 
@@ -36,5 +36,3 @@ class Resize {
 }
 
 export default Resize;
-
-//was bedeutet das false?

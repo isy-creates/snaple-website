@@ -102,3 +102,22 @@ code {
   border-radius: var(-border-radius-element);
   color: var(--primary);
 }
+
+a:link {
+}
+
+p {
+  a {
+    color: var(--primary);
+    background-image: linear-gradient(var(--primary), var(--primary));
+    background-position: 0 100%; /*OR bottom left*/
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
+
+    &:hover {
+      background-position: 100% 100%; /*OR bottom right*/
+      background-size: 100% 2px;
+    }
+  }
+}

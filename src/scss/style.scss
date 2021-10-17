@@ -21,9 +21,9 @@
 @import "components/preview";
 @import "components/code-editor";
 @import "components/messages";
-@import "components/handle";
 @import "components/table-of-content";
 @import "components/decolines";
+@import "components/searchform.scss";
 
 @import "layout/header";
 @import "layout/footer";
@@ -37,3 +37,4 @@
 
 @import "vendors/swiper";
 @import "vendors/gutenberg";
+@import "vendors/ajax-search-lite";
