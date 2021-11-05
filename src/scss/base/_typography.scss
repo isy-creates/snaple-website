@@ -15,34 +15,43 @@ h5,
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2;
-  margin-bottom: var(--space-base);
+  margin-bottom: var(--space-md);
   position: relative;
 }
 
 h1,
 .h1 {
   font-size: clamp(var(--space-md), 3vw, var(--space-lg));
+  margin-bottom:var(--space-md);
 }
 
 h2,
-.h2,
+.h2 {
+  font-size: var(--space-md);
+}
+
 h3,
 .h3 {
-  font-size: clamp(var(--space-sm), 3vw, var(--space-md));
+  font-size: var(--space-sm);
+}
+
+h4,
+.h4 {
+  letter-spacing: 0;
 }
 
 .single h2 {
   &:before {
-    bottom: 0;
+    top: 0;
     content: url("../images/hash.svg");
-    left: -15px;
+    left: -24px;
     position: absolute;
     z-index: -1;
   }
 }
 
 p {
-  margin-bottom: var(--space-base);
+  margin-bottom: var(--space-md);
   &.has-medium-font-size {
     font-size: var(--space-sm);
   }
@@ -55,32 +64,6 @@ code {
 
 .small {
   font-size: var(--space-xs);
-}
-
-// -- pipe after h1-- //
-
-h1,
-.h1 {
-  position: relative;
-
-  &:after {
-    background-color: var(--primary-light);
-    border: 1px solid var(--primary-light);
-    border-radius: var(--border-radius-element);
-    content: "";
-    height: var(--space-md);
-    margin-left: var(--space-xxs);
-    margin-top: rem(3);
-    position: absolute;
-    width: 1px;
-  }
-
-  @include change-at("tablet") {
-    &:after {
-      height: rem(48);
-      margin-top: 0;
-    }
-  }
 }
 
 // -- list styling -- //
@@ -98,13 +81,10 @@ h1,
 
 // -- code -- //
 code {
-  background-color: var(--primary-light);
-  border-radius: var(-border-radius-element);
-  color: var(--primary);
+  background-color: var(--background-color-dark);
+  color: var(--white);
 }
 
-a:link {
-}
 
 p {
   a {

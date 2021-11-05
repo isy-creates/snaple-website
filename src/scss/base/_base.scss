@@ -3,7 +3,7 @@
   --base: 1rem;
   --space-xxs: 0.5rem; //8
   --space-xs: 0.875rem; //14
-  --space-base: 1.125rem; //18
+  --space-base: 1.25rem; //16
   --space-sm: 1.5rem; //24
   --space-md: 2rem; //32
   --space-lg: 2.5rem; // 40
@@ -13,27 +13,29 @@
 
   --fs-base: #{$space-text};
   //colors
-  --primary: hsl(205, 91%, 41%);
-  --primary-light: hsl(203, 90%, 96%);
-  --text-color: hsl(205, 12%, 37%);
-  --headline-color: hsl(205, 72%, 27%);
+  --primary: hsl(228, 90%, 69%);
+  --primary-light: hsl(228, 91%, 96%);
+  --text-color: hsl(228, 12%, 37%);
+  --headline-color: var(--white);
   --border-radius-element: #{rem(5)};
   --border-radius-round: #{rem(20)};
-  --line-color: hsl(205, 27%, 75%);
-  --background-line-color: hsl(206, 32%, 93%);
-  --white: hsl(205, 100%, 100%);
+  --line-color: hsl(228, 14%, 21%);
+  --background-line-color: hsl(225, 14%, 19%);
+  --white: hsl(228, 100%, 100%);
+  --background-color:hsl(228, 8%, 12%);
+  --background-color-dark:hsl(0, 0%, 7%);
   --gradient-main: linear-gradient(
     218deg,
-    hsl(203, 89%, 46%) 0%,
-    hsl(195, 100%, 63%) 100%
+    hsl(228, 90%, 69%) 0%,
+    hsl(194, 90%, 69%) 100%
   );
   --gradient-background: linear-gradient(
     218deg,
     hsl(195, 100%, 63%) 0%,
     hsl(203, 89%, 83%) 100%
   );
-  --box-shadow: 0 2px 8px -1px hsla(203, 72%, 39%, 0.3),
-    0 1px 2px -1px hsla(203, 72%, 39%, 0.2), 0 1px 0 0 hsla(203, 72%, 39%, 0.1);
+  --box-shadow: 0 2px 8px -1px hsla(228, 0%,7%%, 0.3),
+    0 1px 2px -1px hsla(228, 70, 7%, 0.2), 0 1px 0 0 hsla(228, 0%,7%%, 0.1);
 }
 
 ::selection {
@@ -48,7 +50,8 @@ html {
 body {
   font-family: $font-family-base;
   font-size: var(--space-base);
-  color: var(--text-color);
+  color: var(--white);
+  background-color:var(--background-color);
 }
 
 .main {

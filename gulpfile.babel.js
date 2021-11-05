@@ -79,7 +79,8 @@ export const clean = () => del(["dist"]);
 const server = browserSync.create();
 export const serve = done => {
   server.init({
-    proxy: "http://localhost/snaple" // put your local website link here
+    proxy: "localhost/snaple", // put your local website link here
+    port: 80
   });
   done();
 };

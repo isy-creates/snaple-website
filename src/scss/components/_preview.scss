@@ -67,6 +67,7 @@ $width-three-fourth: 75%;
 .is-small {
   height: var(--space-xxs);
   width: $width-one-fourth;
+  margin-bottom: var(--space-xxs);
   background-color: var(--text-color);
   border-radius: var(--border-radius-round);
 }

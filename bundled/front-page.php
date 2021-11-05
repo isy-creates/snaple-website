@@ -4,7 +4,8 @@
 
   <section class="section frontpage__intro">
     <h1><?php the_field('headline'); ?></h1>
-    <h2 class="has-medium-font-size"><?php the_field('introtext'); ?></h2>
+    <h2>testtest</h2>
+    <p class="has-medium-font-size"><?php the_field('introtext'); ?></p>
   </section>
   <section class="section frontpage__articles js-hover">
     <?php
@@ -21,14 +22,13 @@
           $query->the_post(); 
 
           
-          $a = '<a href="'. get_permalink() .'"></a><div class="layout__image">'. get_the_post_thumbnail() .'</div><h4>' . get_the_title() .'</h4>';
+          $a = '<a href="'. get_permalink() .'"></a>'. get_the_post_thumbnail() .'<h4>' . get_the_title() .'</h4>';
   
           $categories = get_the_category();
   
           foreach ( $categories as $key=>$category ) {
-
-              $count = $category->term_id;
-              $b = $category->term_id;      
+  
+              $b = '<li class="layout__headline '. strtolower($category->name) . '"><h3>' . $category->name . '</h3></li>';      
   
           }
   
@@ -37,18 +37,15 @@
   
       /* Restore original Post Data */
       wp_reset_postdata();
+
+
   
       foreach ($q as $key=>$values) {
-
-        $name = get_cat_name( $key );
-        $category = get_category( $key );
-        $count = $category->count;
-        
-          echo '<ul class="layout '. strtolower($name) .'">';
-          echo '<li class="layout__headline"><h3>' . $name . '</h3><p>'. $count .' Pattern</p></li>';
-
+  
+          echo '<ul class="layout">';
+          echo $key;
               foreach ($values as $value){
-                  echo '<li class="layout__content ">' . $value . '</li>';
+                  echo '<li class="layout__content">' . $value . '</li>';
               }
           echo '</ul>';
       }
