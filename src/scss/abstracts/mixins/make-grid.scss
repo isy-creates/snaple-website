@@ -8,11 +8,12 @@
   }
 
   @include change-at("laptop") {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  @include change-at("desktop") {
     grid-template-columns: repeat(6, 1fr);
     margin: 0 auto;
   }
+
+  // @include change-at("desktop") {
+  //   grid-template-columns: repeat(6, 1fr);
+  //   margin: 0 auto;
+  // }
 }

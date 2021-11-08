@@ -1,6 +1,6 @@
 class Hover {
   constructor() {
-    this.element = document.querySelectorAll(".js-hover .layout__content");
+    this.element = document.querySelectorAll(".js-hover .boxes__content");
     this.text = "js-inactive";
     this.opacity = 0;
     this.events();

@@ -16,7 +16,7 @@
     grid-column: 1 / -1;
   }
 
-  .layout {
+  .boxes {
     
     border-top: 1px solid var(--background-line-color);
     list-style-type: none;
@@ -82,7 +82,7 @@
       h4 {
 
         align-items: center;
-        color: var(--text-color);
+        color: var(--white);
         display: flex;
         justify-content: center;
         line-break: anywhere;

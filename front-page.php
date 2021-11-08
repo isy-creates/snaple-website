@@ -21,7 +21,7 @@
           $query->the_post(); 
 
           
-          $a = '<a href="'. get_permalink() .'"></a><div class="layout__image">'. get_the_post_thumbnail() .'</div><h4>' . get_the_title() .'</h4>';
+          $a = '<a href="'. get_permalink() .'"></a><div class="boxes__image">'. get_the_post_thumbnail() .'</div><h4>' . get_the_title() .'</h4>';
   
           $categories = get_the_category();
   
@@ -44,11 +44,11 @@
         $category = get_category( $key );
         $count = $category->count;
         
-          echo '<ul class="layout '. strtolower($name) .'">';
-          echo '<li class="layout__headline"><h3>' . $name . '</h3><p>'. $count .' Pattern</p></li>';
+          echo '<ul class="boxes '. strtolower($name) .'">';
+          echo '<li class="boxes__headline"><h3>' . $name . '</h3><p>'. $count .' Pattern</p></li>';
 
               foreach ($values as $value){
-                  echo '<li class="layout__content ">' . $value . '</li>';
+                  echo '<li class="boxes__content ">' . $value . '</li>';
               }
           echo '</ul>';
       }

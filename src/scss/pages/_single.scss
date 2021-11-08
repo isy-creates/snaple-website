@@ -19,18 +19,32 @@
       //initial keep the width before resize
       width: 100%;
 
-      &:after{
-        bottom: -33px;
-        border-bottom:1px solid var(--background-line-color);
-        color:#A3A3A6;
-        content:'Resize me!';
-        font-size: rem(14);
-        position: absolute;
-        right:1px;
-        text-align: right;
-        padding: 4px;
-        left:1px;
-        background-color: var(--background-color-dark);
+     
+    }
+
+    //resizeable option
+    &.is-resizeable {
+
+      @include change-at('desktop') {
+        &:after{
+          bottom: -33px;
+          border-bottom:1px solid var(--background-line-color);
+          color:#A3A3A6;
+          content:'Resize me!';
+          font-size: rem(14);
+          position: absolute;
+          right:1px;
+          text-align: right;
+          padding: 4px;
+          left:1px;
+          background-color: var(--background-color-dark);
+        }
+
+        .pattern__resizeable {
+          @include change-at('desktop') {
+            resize: horizontal;
+          }
+        }
       }
     }
   }
@@ -69,10 +83,6 @@
     align-items: center;
     justify-content: center;
     overflow: auto;
-
-    @include change-at("desktop") {
-      resize: horizontal;
-    }
 
     @media only screen and (max-width: 1440px) {
       width: auto !important;
