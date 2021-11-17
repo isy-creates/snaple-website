@@ -29,7 +29,7 @@
       <h1 class="headline h1"><?php the_title(); ?> Pattern</h1>
     </article>
 
-    <?php  echo get_the_content() ?>
+    <?php the_content();?>
 
   </div>
   <?php endwhile; endif; ?>

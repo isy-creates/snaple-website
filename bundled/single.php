@@ -9,10 +9,9 @@
     ?>
 
 
-  <div class="pattern__preview">
-    <div class="preview-<?php print strtolower(get_the_title()); ?> pattern__resizeable <?php echo $cat_name  ?>">
+  <div class="pattern__preview <?php if( get_field('pattern_resize') ) : ?>is-resizeable<?php endif; ?>">
+    <div class="preview-<?php print strtolower( get_the_title() );?> pattern__resizeable <?php echo $cat_name  ?>">
       <?php the_field('preview_code'); ?>
-      <div id="handle"></div>
     </div>
   </div>
   <div class="pattern__info">
@@ -30,7 +29,7 @@
       <h1 class="headline h1"><?php the_title(); ?> Pattern</h1>
     </article>
 
-    <?php  echo get_the_content() ?>
+    <?php the_content();?>
 
   </div>
   <?php endwhile; endif; ?>

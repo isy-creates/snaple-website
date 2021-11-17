@@ -1,8 +1,9 @@
 .wp-block-group {
   padding-left: var(--space-sm);
   padding-right: var(--space-sm);
+  width: 100%;
   &:not(:last-of-type) {
-    margin-bottom: clamp(var(--space-lg), 5vw, var(--space-xl));
+    //margin-bottom: clamp(var(--space-lg), 5vw, var(--space-xl));
   }
   @include change-at("desktop") {
     padding-left: 0;

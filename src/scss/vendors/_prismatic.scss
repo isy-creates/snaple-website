@@ -9,10 +9,10 @@ pre[class*="language-"] {
   background-color: var(--background-color-dark);
   border-radius: 0;
   font-family: $font-family-headline;
-  margin: 0 0 clamp(var(--space-lg), 5vw, var(--space-xl)) 0;
   text-shadow: none;
   border: none;
   box-shadow: none;
+  margin-top:0;
 }
 
 .token.property,

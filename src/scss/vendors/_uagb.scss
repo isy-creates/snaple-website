@@ -1,0 +1,33 @@
+// TABS
+
+.pattern__info {
+
+  .wp-block-uagb-tabs {
+    padding: 0 var(--space-sm);
+
+    @media (min-width: 1024px) {
+      padding: 0;
+    }
+  }
+
+  .uagb-tab {
+    border-width:0 !important;
+    border-radius: 0 !important;
+  }
+
+  .uagb-tabs__wrap {
+    margin: 0;
+
+    .uagb-tabs__body-container {
+      padding: 0;
+    }
+  }
+
+  .uagb-tabs__body-wrap {
+    border: none;
+    border-style: none !important;
+  }
+}
+
+
+

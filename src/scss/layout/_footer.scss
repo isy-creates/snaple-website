@@ -1,7 +1,10 @@
 .footer {
   border-top: 1px solid var(--background-line-color);
+  
   display: flex;
   flex-direction: column;
+  gap:var(--component-padding);
+  justify-content: center;
 
   @include change-at("tablet") {
     flex-direction: row;
@@ -17,18 +20,18 @@
   &-menu {
     display: flex;
     list-style-type: none;
-    text-align: center;
+    justify-content: center;
     li:not(:last-of-type) {
       margin-right: var(--space-xs);
     }
   }
 
   &-social {
-    text-align: center;
     padding: var(--size-lg) var(--size-xs) 0;
 
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--base);
 
     @include change-at("tablet") {
