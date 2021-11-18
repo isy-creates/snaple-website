@@ -15,11 +15,9 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  margin-left: $size-m;
   list-style-type: none;
 
-  padding-bottom: $size-l;
-  border-bottom: 1px solid $line-color;
+  border-bottom: 2px solid var(--primary);
 
   &::-webkit-scrollbar {
     display: none;
@@ -51,6 +49,14 @@
       border-bottom: 2px solid var(--primary);
       bottom: 0;
       animation: hover 0.3s;
+    }
+  }
+}
+
+.menu-item {
+  &:hover {
+    &:after {
+      bottom:-6px;
     }
   }
 }
