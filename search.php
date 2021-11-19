@@ -7,24 +7,23 @@ if ( have_posts() ) :
 <main class="main frontpage">
 
   <section class="frontpage__intro">
-    <h1>Search results for <?php the_search_query(); ?></h1>
+    <h1>Search results for »<?php the_search_query(); ?>«</h1>
   </section>
   <section class="section frontpage__articles js-hover">
-    <ul class="layout">
+    <ul class="boxes">
       <?php
 	while ( have_posts() ) : the_post(); ?>
 
 
-      <li class="layout__content">
+      <li class="boxes__content">
         <a href="<?php the_permalink() ?>"></a>
-        <?php if ( has_post_thumbnail() ) { 
+        <div class="boxes__image">
+          <?php if ( has_post_thumbnail() ) { 
              the_post_thumbnail( 'small-thumbnail' ); 
            } ?>
+        </div>
         <h4><?php the_title() ?></h4>
-
-
       </li>
-
 
       <?php endwhile;
 

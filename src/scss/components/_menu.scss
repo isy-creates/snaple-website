@@ -36,7 +36,7 @@
   &:after {
     @extend %after;
     border-bottom: 2px solid var(--primary);
-    bottom: 0;
+    bottom: -6px;
   }
 }
 
@@ -107,3 +107,4 @@
     }
   }
 }
+
