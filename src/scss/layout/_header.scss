@@ -1,14 +1,15 @@
 .header {
-  border-bottom: 1px solid var(--background-line-color);
+
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  justify-content: space-between;
   gap: var(--component-padding);
+
   padding: var(--component-padding) var(--component-padding) 0;
 
+  border-bottom: 1px solid var(--background-line-color);
+
   @include change-at("desktop") {
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: flex-end;
   }
 }

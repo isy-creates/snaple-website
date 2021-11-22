@@ -1,7 +1,7 @@
 .frontpage {
   &__intro {
     grid-column: 1 / -1;
-    padding: 96px 0;
+    padding: 96px var(--component-padding);
 
     @include change-at("laptop") {
       grid-column: 1 / span 3;
@@ -9,6 +9,7 @@
 
     @include change-at("desktop") {
       grid-column: 2 / span 4;
+      padding: 96px 0;
     }
   }
 

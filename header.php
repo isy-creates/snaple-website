@@ -17,13 +17,18 @@
       <?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
     </div>
 
-    <?php get_search_form(); ?>
 
-    <?php wp_nav_menu( array(
-  'theme_location' => 'header-menu',
-  'container' => false,
+    <div class="menu">
+      <?php wp_nav_menu( array(
+    'theme_location' => 'header-menu',
+    'container' => false,
   'menu_class' => 'menu',
   'menu_id' => 'main-navigation'
 )); ?>
+    </div>
+
+    <div class="search">
+      <?php get_search_form(); ?>
+    </div>
 
   </header>

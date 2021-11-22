@@ -1,4 +1,12 @@
-.custom-logo {
-  height: rem(48);
-  width: rem(141);
+.logo {
+  flex: 0 0 70%;
+
+  @include change-at("desktop") {
+    flex: initial;
+  }
+
+  .custom-logo {
+    height: rem(48);
+    width: rem(141);
+  }
 }

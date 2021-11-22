@@ -1,11 +1,22 @@
+.search {
+  order: 2;
+  flex: 0 0 100%;
+
+  @include change-at("desktop") {
+    order: 0;
+    flex: 0 0 639px;
+
+  }
+}
 div.asl_w {
   align-items: center;
   display: flex;
   height: rem(48);
-  max-width: 639px;
 }
 
 #ajaxsearchlite1 {
+  border-bottom: 2px solid var(--primary) !important;
+  
   .probox {
     padding: 0 var(--base);
     width: 100%;
@@ -16,8 +27,8 @@ div.asl_m .probox .proinput input::-webkit-input-placeholder {
   opacity: 1;
 }
 div.asl_w .probox .proinput input::-webkit-input-placeholder {
-  color: var(--text-color) !important;
-  font-size: var(--space-xs);
+  color: var(--primary-light) !important;
+  font-size: var(--base);
 }
 
 //Search Results
@@ -70,14 +81,21 @@ div.asl_r.vertical {
 
 //close button
 div.asl_m .probox .proclose svg {
-  background: var(--headline-color);
-  fill: var(--white) !important;
+  background: transparent;
+  fill: var(--primary) !important;
+  box-shadow:none!important;
+  border:none !important;
 }
 
 //Input Box Text
 #ajaxsearchlite1 .probox .proinput input,
 div.asl_w .probox .proinput input {
-  color: var(--text-color) !important;
+  color: var(--white) !important;
   font-size: var(--space-base);
   text-shadow: none;
+}
+
+#ajaxsearchlite1 .probox .proinput, div.asl_w .probox .proinput {
+  font-size: 16px;
+  color:var(--white) !important;
 }

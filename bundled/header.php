@@ -19,11 +19,11 @@
 
     <?php get_search_form(); ?>
 
-    <!-- <?php wp_nav_menu( array(
+    <?php wp_nav_menu( array(
   'theme_location' => 'header-menu',
   'container' => false,
   'menu_class' => 'menu',
   'menu_id' => 'main-navigation'
-)); ?> -->
+)); ?>
 
   </header>

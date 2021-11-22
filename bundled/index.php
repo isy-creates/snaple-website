@@ -47,7 +47,6 @@
         <?php } wp_reset_postdata();
           ?>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
   </section>
 
